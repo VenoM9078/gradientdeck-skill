@@ -1,0 +1,57 @@
+# Generic defaults ("tells")
+
+Patterns that make a page read as template or AI output. None is banned; each is a **default**, and defaults are what you reach for when nothing about the product has been considered. Use one only when the subject or the existing system calls for it, and say why in your design note.
+
+For each: what it looks like → why it reads as generic → what to do instead → when it's fine.
+
+## Color and surface
+
+- **Purple-to-blue or cyan-to-magenta gradients** (backgrounds, buttons, text) → the single most common AI palette; it signals "no decision" → derive color from the subject's material world (see `color.md`) → fine when the brand already owns those colors.
+- **Gradient-filled headlines** (`background-clip: text`) → decoration standing in for an idea; often hurts legibility → let size, weight and layout carry the headline; if color must carry it, use one solid committed color → fine for a single display word in an established brand system, with contrast checked at every point of the gradient.
+- **Glows, soft blobs, aurora backgrounds** behind the hero → atmosphere with no source → if the page needs atmosphere, take it from the subject (a photograph, a texture, a material) → fine in a genuinely atmospheric genre (music, nightlife, games) when it's the one bold move.
+- **Pure #000 or #fff as the base, or neutral gray everywhere** → untinted neutrals look unconsidered → tint neutrals slightly toward the brand hue → fine when the product's system already uses true neutrals.
+- **The safe "tasteful" palette** (warm cream background, serif headline, terracotta or rust accent; or near-black with one acid-green accent) → these became the default "distinctive" look and are now generic too → treat any palette that feels instantly "designery" as spent; derive yours from the subject.
+- **Glassmorphism on everything** (frosted cards over gradients) → effect without a reason → use translucency only where something real sits behind it.
+
+## Type
+
+- **One sans-serif for everything, at default weights** → no voice → choose type by procedure (`typography.md`): from the subject's vernacular, with real contrast between roles.
+- **Swapping the most common font for the second most common** → still the default, one step removed → if you can name the face you're avoiding, you're probably about to choose its neighbour; go back to the subject.
+- **A small all-caps label above every heading** ("FEATURES", "HOW IT WORKS") → template chrome → use it only where it adds information the heading doesn't; most headings need nothing above them.
+- **An italic or colored "emphasis word" in every headline** → a formula → if a headline needs emphasis, rewrite it.
+- **Monospace labels and metadata strings ("v2.0 · 2026 · open source") for flavour** → borrowed technical costume → use monospace only for actual code, data or values.
+
+## Layout and composition
+
+- **Centered hero, full viewport height, headline + subline + two buttons** → the default first screen → decide what the visitor must see first for this product (see `composition.md`); often it's the product itself, a real image or a concrete statement, laid out asymmetrically.
+- **Hero → three feature cards → testimonial → CTA → footer** → the default skeleton → choose a page structure on purpose from `composition.md`, and make it differ from the last build on at least two axes.
+- **A row of three identical cards, each with an icon in a rounded tile, a bold title and two lines** → filler that looks like content → if features matter, show them (screenshot, demo, example); if they don't, cut them; vary weight when items differ in importance.
+- **Cards inside cards; borders around everything** → boxes as decoration → use space and alignment to group; a border or surface change should mark a real boundary.
+- **Thick colored left border on cards or callouts** → a template signature → use background tint or position to mark emphasis.
+- **Bento grid of mismatched tiles** as a default feature layout → fine only when the tiles hold real, varied content of different importance.
+- **Stat row of big numbers** ("10k+ users · 99.9% uptime · 24/7 support") → usually invented or meaningless → NEVER invent numbers; use real figures with sources, or remove the row.
+
+## Interaction and motion
+
+- **`transition: all` and hover-scale on every card and button** → motion without purpose → name the animated properties, one hover signal per element (`motion.md`).
+- **Bounce or overshoot easing on UI state changes** → playful in the wrong place → reserve springs for direct manipulation; use ease-out for UI.
+- **Everything fades up on scroll** → motion as a default → animate only what benefits from attention or continuity.
+- **Toasts for actions the user can already see happened** → noise → show the result in place.
+
+## Imagery and content
+
+- **Emoji as icons or bullet points** → unfinished → use one consistent icon set, or no icons.
+- **Fake browser windows, phone frames and editor chrome** around content → costume → show the real thing, or a real screenshot.
+- **Abstract 3D shapes, isometric illustrations and stock "team at laptop" photos** → interchangeable imagery → use real product screenshots, real photography of the subject, or no image.
+- **Invented social proof**: logo walls of companies that aren't customers, made-up testimonials, "trusted by thousands" → dishonest and recognisable → NEVER; use labelled placeholders.
+
+## Copy
+
+- **Hype words** ("revolutionize", "supercharge", "unlock", "seamless", "next-generation", "all-in-one") → say what the product does, concretely.
+- **"Not just X, but Y" and "X meets Y" constructions; triplets of adjectives** → formulas → write the specific claim.
+- **"Get started" / "Learn more" as the only calls to action** → name the actual action ("Create your first invoice").
+- **Heavy em-dash rhythm and rhetorical questions as headlines** → recognisable generated cadence → plain statements.
+
+## Don't create new tells
+
+Replacing one default with another is the most common failure. Signs you're doing it: you're reaching for a "distinctive" choice you've seen often lately; your last three builds share a font, palette or structure; a choice feels safe-but-tasteful rather than right for this subject. When you notice it, go back to the subject and choose from there.

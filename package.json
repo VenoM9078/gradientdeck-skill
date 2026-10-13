@@ -1,0 +1,35 @@
+{
+  "name": "gradientdeck",
+  "version": "0.1.0",
+  "description": "Design judgment for coding agents. An Agent Skill that teaches typography, color, layout, motion, copy and review, with generic AI defaults caught at every step.",
+  "type": "module",
+  "bin": {
+    "gradientdeck": "bin/gradientdeck.mjs"
+  },
+  "files": [
+    "bin/",
+    "skills/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "agent-skill",
+    "skill",
+    "design",
+    "ui",
+    "frontend",
+    "claude-code",
+    "codex",
+    "cursor",
+    "typography",
+    "design-system"
+  ],
+  "homepage": "https://gradientdeck.com",
+  "license": "MIT"
+}
