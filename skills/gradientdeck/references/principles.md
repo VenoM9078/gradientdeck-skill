@@ -8,6 +8,17 @@ Before you call anything finished, ask: **could an unrelated product use this pa
 
 Run the test on the direction before you build, and again on the rendered result.
 
+## Every choice has a source
+
+Each major choice (typeface, palette strategy, page structure, the bold move, the image approach) must trace to one of four sources:
+
+1. **The brief:** something the user said or supplied.
+2. **The subject:** an item from the subject inventory (`direction.md`) or the product's real content.
+3. **The existing system:** tokens, components or pages already in the codebase (`extend.md`).
+4. **A requirement:** accessibility, platform convention or a technical constraint.
+
+A choice that traces to none of these is a default wearing a disguise. Find it a source or replace it with one that has one. Name the source for each major choice in the design note; one short clause each is enough.
+
 ## Hierarchy
 
 - One thing per view is the most important. Decide what it is, then make it unmistakable using **one or two** of size, weight, color, position and space. Using all five at once flattens hierarchy again.

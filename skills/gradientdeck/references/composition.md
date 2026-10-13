@@ -42,8 +42,9 @@ In New world work, consecutive builds SHOULD differ on at least two of these (th
 
 ## Rules
 
-- SHOULD let every section answer one question. A section with no question to answer is cut.
+- SHOULD let every section answer one question, and do one of four jobs: **explain** (what it is, how it works), **prove** (evidence for a claim), **deepen** (detail for people already convinced) or **convert** (the next step). A section that does none of these is cut, however good it looks.
 - SHOULD vary section weight to match importance. The most persuasive section gets the most space; supporting detail gets less.
+- SHOULD pass the **brand test** in Persuade mode: hide the logo and nav, then look at the first viewport. If it could belong to another company in the same category, the product's identity isn't in it yet; change the content or structure, not the decoration.
 - AVOID filling the first viewport to exactly 100vh by default. Let the next section peek in when the page continues, so scrolling feels invited.
 - SHOULD place proof next to the claim it supports, not in a separate "testimonials" band. NEVER invent it (see `SKILL.md`).
 - SHOULD keep the page as short as the argument. Stop when the questions run out.
@@ -84,7 +85,8 @@ In New world work, consecutive builds SHOULD differ on at least two of these (th
 ## Check
 
 - The first viewport answers one named visitor question, and you can say which.
-- Each section maps to one question; no two answer the same one.
+- Each section maps to one question and one job (explain, prove, deepen, convert); no two answer the same one.
+- Persuade: with logo and nav hidden, the first viewport still couldn't belong to a competitor.
 - The skeleton is named in the design note, with the two variation axes that differ from the last build.
 - One primary action, with a specific label, placed where the argument resolves.
 - Nav and footer are sized to the site, keyboard-reachable, with current page marked.

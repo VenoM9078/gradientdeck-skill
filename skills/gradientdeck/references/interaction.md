@@ -58,6 +58,19 @@ The MUSTs (visible on every element, 3:1 contrast, order, focus return) are in `
 - **Loading:** SHOULD use skeletons shaped like the real content when layout is known, and a spinner for short, unknown-shape waits. Show nothing for the first ~300ms to avoid flashes on fast responses. SHOULD reserve space so content arriving doesn't shift the layout.
 - **Error:** SHOULD say what failed, whether data was lost, and what to do (retry, contact). Keep the rest of the page usable; fail the smallest region possible.
 
+## Worst-case content
+
+Design with real content, then break it on purpose. SHOULD check every component that shows user or product data against:
+
+- A very long name, title or email, and an unbroken string (a URL, a token): it wraps or truncates with the full value available, never overflows.
+- A one-character value and an empty value: the layout holds, and empty reads as intentional (a dash, "None", or the empty state).
+- One item, and several hundred: lists paginate or virtualize; grids don't leave a lonely orphan card looking broken.
+- Large numbers (a seven-digit count, a long currency amount, a negative value): formatted, aligned, not clipped.
+- Text about 40% longer, as in many translations: buttons and labels grow or wrap without collisions.
+- Missing images and avatars: a deliberate fallback, not a broken icon.
+
+Placeholder content written to fit the layout perfectly hides all of these. If you control the sample data, include at least one worst case on the page while building.
+
 ## Affordance
 
 - SHOULD make links look like links in running text: underlined or otherwise distinct beyond color.
@@ -96,3 +109,4 @@ Small details that show the interface was finished. Tie each to the system's tok
 - No toast duplicates something visible on screen.
 - Links in text are distinguishable without color; nothing static has hover or pointer styling.
 - Selection, caret, native controls and changing numbers are styled from tokens.
+- Data components survive long, empty, huge and translated content without overflow or collisions.

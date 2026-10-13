@@ -12,6 +12,7 @@ For each: what it looks like → why it reads as generic → what to do instead 
 - **Pure #000 or #fff as the base, or neutral gray everywhere** → untinted neutrals look unconsidered → tint neutrals slightly toward the brand hue → fine when the product's system already uses true neutrals.
 - **The safe "tasteful" palette** (warm cream background, serif headline, terracotta or rust accent; or near-black with one acid-green accent) → these became the default "distinctive" look and are now generic too → treat any palette that feels instantly "designery" as spent; derive yours from the subject.
 - **Glassmorphism on everything** (frosted cards over gradients) → effect without a reason → use translucency only where something real sits behind it.
+- **A hairline border plus a wide, soft shadow on every card** → two boundaries doing one job, now a common generated finish → pick one way to separate the surface (border, tint or shadow) and use it consistently.
 
 ## Type
 
@@ -19,7 +20,8 @@ For each: what it looks like → why it reads as generic → what to do instead 
 - **Swapping the most common font for the second most common** → still the default, one step removed → if you can name the face you're avoiding, you're probably about to choose its neighbour; go back to the subject.
 - **A small all-caps label above every heading** ("FEATURES", "HOW IT WORKS") → template chrome → use it only where it adds information the heading doesn't; most headings need nothing above them.
 - **An italic or colored "emphasis word" in every headline** → a formula → if a headline needs emphasis, rewrite it.
-- **Monospace labels and metadata strings ("v2.0 · 2026 · open source") for flavour** → borrowed technical costume → use monospace only for actual code, data or values.
+- **Monospace labels and metadata strings ("v2.0 · 2026 · open source", "DESIGN · BUILD · SHIP", "WORD — fragment") for flavour** → borrowed technical and editorial costume → use monospace only for actual code, data or values; write labels as plain words.
+- **Oversized display headlines with extreme negative letter-spacing** → "impact" by default; letters start to collide and the size rarely matches the content → size display type to the layout and the message, and tighten only as much as the face needs at that size (`typography.md`).
 
 ## Layout and composition
 
@@ -29,6 +31,8 @@ For each: what it looks like → why it reads as generic → what to do instead 
 - **Cards inside cards; borders around everything** → boxes as decoration → use space and alignment to group; a border or surface change should mark a real boundary.
 - **Thick colored left border on cards or callouts** → a template signature → use background tint or position to mark emphasis.
 - **Bento grid of mismatched tiles** as a default feature layout → fine only when the tiles hold real, varied content of different importance.
+- **Numbered section markers (01 / 02 / 03) on content that isn't a sequence** → borrowed structure → number only real steps, ranks or chapters.
+- **The hairline-ruled "broadsheet" look** (zero radius, thin rules everywhere, dense newspaper columns) as the default "serious" style → it became the tasteful alternative and is now a default too → use it only when the content is genuinely editorial and the structure follows from it.
 - **Stat row of big numbers** ("10k+ users · 99.9% uptime · 24/7 support") → usually invented or meaningless → NEVER invent numbers; use real figures with sources, or remove the row.
 
 ## Interaction and motion
@@ -37,6 +41,8 @@ For each: what it looks like → why it reads as generic → what to do instead 
 - **Bounce or overshoot easing on UI state changes** → playful in the wrong place → reserve springs for direct manipulation; use ease-out for UI.
 - **Everything fades up on scroll** → motion as a default → animate only what benefits from attention or continuity.
 - **Toasts for actions the user can already see happened** → noise → show the result in place.
+- **An arrow (→) on every link and button** → decoration posing as direction → use an arrow only where it means "go somewhere" or "next", not on every call to action.
+- **Zoom-on-hover for every image** → motion with no meaning → reserve it for images that actually open larger.
 
 ## Imagery and content
 

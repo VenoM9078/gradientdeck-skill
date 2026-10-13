@@ -4,19 +4,20 @@ How to critique a page or component and verify your own build. Used by the `revi
 
 ## How to look
 
-1. **Render it if you can.** With a browser tool (a Playwright, Chrome DevTools or browser-preview tool), load the page and capture full-page screenshots at 1440, 768 and 390 pixels wide. Check 320 too, for horizontal overflow only.
+1. **Render it if you can.** With a browser tool (a Playwright, Chrome DevTools or browser-preview tool), load the page and capture full-page screenshots at 1440, 768 and 390 pixels wide. Check 320 too, for horizontal overflow only. If the user reported a problem at a specific size or device, render that size as well, and re-render it after the fix.
 2. **Let it settle.** Wait for web fonts to load (`document.fonts.ready`), for entrance animations to finish and for lazy images to arrive before capturing. Scroll the page once so scroll-triggered content renders.
 3. **Distrust the screenshot.** Confirm it isn't blank, half-loaded, showing fallback fonts, a cookie wall or an error overlay. If it is, fix the capture before judging the design.
-4. **Read computed values** where the tool allows: font family actually rendered, font sizes, colours (for contrast), element widths (for overflow and line length). Measure; don't estimate from pixels.
-5. **Exercise states.** Hover, focus (tab through the page), active, disabled, empty, loading, error, and long or missing content where you can trigger them.
-6. **No browser tool?** Review the code against this file, and say plainly in the report that the result wasn't rendered and which checks that leaves unverified.
-7. **Prefer fresh eyes.** If you can start a subagent, give it the rendered page (or the code), the mode and this file, without your design note. A reviewer who didn't make the decisions sees what's actually there. Self-review is the fallback.
+4. **Read computed values** where the tool allows: font family actually rendered, font sizes, colours (for contrast), element widths (for overflow and line length). Measure; don't estimate from pixels. Counts and values in the report (how many components, which font loaded, what the contrast is) come from the page or the files, never from memory.
+5. **Exercise states.** Hover, focus (tab through the page), active, disabled, empty, loading, error.
+6. **Stress the content.** Swap in worst cases where you can: a very long name or unbroken word, an empty value, one item and several hundred, a seven-digit number, text 40% longer as if translated. Layouts that only work with ideal content are broken (`interaction.md`).
+7. **No browser tool?** Review the code against this file, and say plainly in the report that the result wasn't rendered and which checks that leaves unverified.
+8. **Prefer fresh eyes.** If you can start a subagent, give it the rendered page (or the code), the mode and this file, without your design note. A reviewer who didn't make the decisions sees what's actually there. Self-review is the fallback.
 
 ## What to check, in order
 
 Order matters: earlier items decide whether later ones are worth fixing.
 
-1. **Specificity.** Could an unrelated product use this page unchanged, with only the name swapped (`principles.md`)? This is the verdict, and it comes first. In Extend, the question becomes: does it look like the rest of this product?
+1. **Specificity.** Could an unrelated product use this page unchanged, with only the name swapped (`principles.md`)? For Persuade pages, also run the brand test on the first viewport (`composition.md`). This is the verdict, and it comes first. In Extend, the question becomes: does it look like the rest of this product?
 2. **Hierarchy and composition.** Is the most important thing in each view obvious at 25% zoom? Does the structure fit the content (`composition.md`)? Is boldness spent in one place?
 3. **Typography.** Roles distinct, scale steps clear, line length 45–75 characters for body, leading suited to size, no fallback font rendering (`typography.md`).
 4. **Colour and contrast.** Palette roles consistent; text meets 4.5:1 (3:1 for large text); meaning never by colour alone (`color.md`).
@@ -27,7 +28,7 @@ Order matters: earlier items decide whether later ones are worth fixing.
 9. **Accessibility floor.** Focus visible, targets 24×24px minimum (44×44px on touch), semantics and labels, reduced motion honoured (`accessibility.md`).
 10. **Motion.** Each animation has a purpose, named properties, sensible duration, a reduced-motion version (`motion.md`).
 11. **Generic defaults.** Patterns from `tells.md` used without a stated reason.
-12. **System drift.** Raw values, off-token colours, near-duplicate components (`extend.md`).
+12. **System drift.** Raw values, off-token colours, near-duplicate components (`extend.md`). If the project has a `DESIGN.md`, turn each of its Don'ts into a check and verify it against the page.
 
 For Operate surfaces, also check density, scanning and data formatting against `apps-and-data.md`.
 
@@ -42,6 +43,7 @@ For Operate surfaces, also check density, scanning and data formatting against `
 
 ## Rules
 
+- NEVER claim you looked at, measured or tested something you didn't. Each finding comes from a rendered screenshot, a computed value or the code, and the report says which checks had no evidence.
 - MUST report every P0 you find, even beyond the finding limit.
 - SHOULD point at a location for every finding: a selector, component name, or `file:line`.
 - SHOULD give a fix for every finding, concrete enough to act on ("raise `--text-muted` to meet 4.5:1 on `--surface`", not "improve contrast").
@@ -75,5 +77,6 @@ Unverified: <anything you couldn't check>
 - Every finding has a severity, a location, a problem and a fix.
 - All P0s are listed; total findings around 10 or fewer otherwise.
 - Opinions are labelled and no higher than P2.
-- The report states whether the page was rendered.
+- The report states whether the page was rendered, and nothing is claimed without evidence.
+- Worst-case content and any user-reported size were checked, or listed as unverified.
 - No scores anywhere.

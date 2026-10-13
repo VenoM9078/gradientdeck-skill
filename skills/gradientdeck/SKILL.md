@@ -54,7 +54,7 @@ Your taste fills only the gaps these leave.
 
 ## 3. Work in this order
 
-1. **Note.** Before writing code, write a short design note (5–10 lines) in your reply: situation, mode, what you're inheriting, the direction or the single bold move, and what you considered and rejected. Rejected options are required; they prove a decision was made. In Extend and New surface, the note is the pre-flight contract in `extend.md`.
+1. **Note.** Before writing code, write a short design note (5–10 lines) in your reply: situation, mode, what you're inheriting, the direction or the single bold move, and what you considered and rejected. Rejected options are required; they prove a decision was made. Each major choice names its source: the brief, the subject, the existing system, or a requirement (`principles.md`). In Extend and New surface, the note is the pre-flight contract in `extend.md`.
 2. **Build.** Follow the primitives. Reuse existing components before writing new ones. Copy is part of the design (`copy.md`).
 3. **Look.** Verify the rendered result, not just the code. If a browser tool is available (a Playwright, Chrome DevTools or browser-preview tool), render at 1440, 768 and 390 pixels wide and look at each, plus 320 to catch overflow. If none is available, say so and check the code against `review.md` instead.
 4. **Fix.** Fix what the check found. **Stop after two rounds** of look-and-fix; report anything left over rather than looping.
