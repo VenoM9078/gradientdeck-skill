@@ -1,0 +1,35 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; color: #333; background: #fff; }
+a { text-decoration: none; color: inherit; }
+.nav { position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 24px 80px; z-index: 10; color: #fff; }
+.nav ul { display: flex; gap: 32px; list-style: none; align-items: center; }
+.logo { font-family: 'Playfair Display', serif; font-size: 28px; }
+.btn { display: inline-block; background: #c9a24d; color: #fff; padding: 12px 30px; border-radius: 4px; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; transition: all 0.3s ease; }
+.btn:hover { background: #b08a3a; transform: translateY(-2px); }
+.btn.outline { background: transparent; border: 2px solid #c9a24d; color: #c9a24d; }
+.hero { height: 100vh; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; color: #fff; background: #3b2a1f linear-gradient(135deg, #5a3e2b, #1f1510); }
+.overlay { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.5); }
+.hero-content { position: relative; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 80px; margin: 10px 0; }
+.hero p { font-size: 20px; font-weight: 300; margin-bottom: 30px; }
+.eyebrow { color: #c9a24d; letter-spacing: 4px; font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+section { padding: 100px 80px; }
+h2 { font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 24px; }
+.about { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.about-img { height: 420px; background: #d8c3a5; border-radius: 8px; }
+.about p { line-height: 1.8; color: #666; margin-bottom: 30px; }
+.menu { text-align: center; background: #faf7f2; }
+.menu-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; margin-top: 40px; }
+.dish { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); padding-bottom: 24px; transition: all 0.3s; }
+.dish:hover { transform: translateY(-8px); }
+.dish-img { height: 180px; background: #e8d9c4; margin-bottom: 20px; }
+.dish h3 { font-size: 18px; margin-bottom: 6px; }
+.dish p { color: #888; font-size: 14px; margin-bottom: 12px; }
+.dish span { color: #c9a24d; font-weight: 600; font-size: 18px; }
+.reviews { text-align: center; background: #1f1510; color: #fff; }
+.stars { color: #c9a24d; font-size: 28px; }
+.quote { font-family: 'Playfair Display', serif; font-size: 28px; font-style: italic; margin-top: 16px; }
+.visit { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; gap: 30px; }
+.visit h3 { margin-bottom: 10px; }
+.visit p { color: #666; line-height: 1.8; }
+.footer { text-align: center; padding: 30px; background: #111; color: #888; font-size: 14px; }

@@ -1,0 +1,111 @@
+{
+  "staticSuffix": "Build it as a static site in the current folder: an index.html plus any CSS, JS or image files you need. No build step and no package installs. Web fonts and libraries from a CDN are fine. Work only inside the current folder.",
+  "tasks": [
+    {
+      "id": "g01-bakery",
+      "kind": "greenfield",
+      "prompt": "Design and build a landing page for Miolo, a small sourdough bakery in Porto's Bonfim neighbourhood. Two bakers, Inês and Tomás, run it. They bake one batch a day from 4am; bread is usually sold out by early afternoon. Products: country loaf (€4.50), rye with seeds (€5), pastéis de nata (€1.40), and a weekend-only olive focaccia (€6). Open Tue–Sat 7:30–14:00. Customers can preorder by WhatsApp until 20:00 the day before. Address: Rua do Heroísmo 214, Porto. They want people to understand the daily rhythm and preorder."
+    },
+    {
+      "id": "g02-cli",
+      "kind": "greenfield",
+      "prompt": "Design and build a landing page for Tern, an open-source CLI for running database schema migrations. It works with Postgres, MySQL and SQLite. Migrations are plain SQL files; Tern records applied ones in a tern_migrations table, can dry-run, and refuses to run if a migration file changed after it was applied. Install: `brew install tern` or `go install github.com/tern-db/tern@latest`. MIT licensed, written in Go, current version 0.9. The page should get developers to try it in under a minute."
+    },
+    {
+      "id": "g03-lawfirm",
+      "kind": "greenfield",
+      "prompt": "Design and build a website home page for Hale & Okafor, a two-partner employment law firm in Manchester that represents employees (not employers) in the tech industry: unfair dismissal, discrimination, settlement agreements, and equity/stock option disputes on exit. Partners: Priya Hale and Daniel Okafor. First consultation is a free 30-minute call. They want to look credible and approachable, not stuffy, and get people to book the call."
+    },
+    {
+      "id": "g04-festival",
+      "kind": "greenfield",
+      "prompt": "Design and build a website for Dùsgadh, a three-day folk and traditional music festival on a farm near Aviemore in the Scottish Highlands, 14–16 August. About 1,200 people, camping on site, three stages (the Barn, the Field, the Bothy), Gaelic song workshops, and a ceilidh every night. Weekend tickets £145, day tickets £60, under-12s free. The line-up isn't announced yet. The page should sell weekend tickets."
+    },
+    {
+      "id": "g05-fintech",
+      "kind": "greenfield",
+      "prompt": "Design and build a marketing page for Ledgerly, a budgeting app for freelancers whose income changes month to month. It connects to bank accounts, sets aside a percentage of each payment for tax automatically, and shows how many months of expenses you have saved ('runway'). iOS and Android. £5.99/month after a 30-day free trial. The goal is app downloads."
+    },
+    {
+      "id": "g06-nonprofit",
+      "kind": "greenfield",
+      "prompt": "Design and build a donation page for Open Rivers Leeds, a volunteer charity that removes weirs and culverts to restore wildlife to rivers in Leeds. Their current project is daylighting a 300-metre culverted section of Meanwood Beck. £25 pays for a volunteer workday's tools, £100 for a fish survey, £500 for a section of native riverbank planting. They want monthly donors more than one-off gifts."
+    },
+    {
+      "id": "g07-ceramics",
+      "kind": "greenfield",
+      "prompt": "Design and build a website for Kiln & Kettle, a ceramics studio in Asheville, North Carolina run by potter June Alvarez. She sells handmade stoneware tableware (mugs $38, bowls $45, plates $52, all in three glazes: ash, iron red, celadon) and runs six-week wheel-throwing courses ($320, max 6 people, Tuesday or Thursday evenings). Shipping within the US only. The site should sell pieces and fill courses."
+    },
+    {
+      "id": "g08-saas",
+      "kind": "greenfield",
+      "prompt": "Design and build a landing page for Rota, an on-call scheduling tool for SRE and platform teams. It builds fair on-call rotations from people's time zones and time-off calendars, handles swaps with one click in Slack, and exports to PagerDuty and Opsgenie. Pricing: free up to 5 people, then $4 per user per month. The goal is free sign-ups."
+    },
+    {
+      "id": "g09-architecture",
+      "kind": "greenfield",
+      "holdout": true,
+      "prompt": "Design and build a portfolio website for Studio Varga, a four-person architecture practice in Ljubljana that works mostly on timber housing and small public buildings. Projects to show: a timber kindergarten in Kranj (2023), a row of six passive houses in Škofja Loka (2022), and a library extension in Novo Mesto (2024, competition win). Use labelled placeholders for photos. They want to attract public clients and competition partners."
+    },
+    {
+      "id": "g10-museum",
+      "kind": "greenfield",
+      "holdout": true,
+      "prompt": "Design and build a 'Plan your visit' page for Spark, a hands-on science museum for children aged 3–12 in Bristol. Open daily 10:00–17:00, closed 24–26 December. Tickets: adults £12, children £9, under-3s free, family ticket (2+2) £36. Highlights: a water play gallery, a build-your-own-circuit lab, and a planetarium with shows every hour. Step-free access throughout, a quiet room, and buggy parking. The page should help parents plan and buy tickets."
+    },
+    {
+      "id": "e01-gd-changelog",
+      "kind": "extend",
+      "codebase": "gradientdeck",
+      "route": "/changelog",
+      "prompt": "Add a changelog page at /changelog to this site. Entries (newest first): 2026-10-14: Gradient generator now outputs Tailwind v4 classes for radial and conic gradients. 2026-10-09: New palette visualizer toolbar and themed navigation. 2026-09-30: Journal launched with articles on OKLCH and layered shadows. 2026-09-12: Liquid glass generator gained light and dark themes. Link it from the footer. Make it fit the rest of the site."
+    },
+    {
+      "id": "e02-gd-faq",
+      "kind": "extend",
+      "codebase": "gradientdeck",
+      "route": "/faq",
+      "prompt": "Add an FAQ page at /faq to this site, covering: Is GradientDeck free? (yes, no account needed); Can I use the generated code commercially? (yes); Which Tailwind version is the output for? (Tailwind CSS v4); Is there a Figma plugin? (yes, link /figma-plugin); How do I report a bug? (link /contact). Make it match the rest of the site."
+    },
+    {
+      "id": "e03-gd-tools",
+      "kind": "extend",
+      "codebase": "gradientdeck",
+      "route": "/tools",
+      "holdout": true,
+      "prompt": "Add an 'All tools' index page at /tools to this site that lists every tool with a one-line description and links to it, grouped the same way the homepage groups them. Make it fit the existing design."
+    },
+    {
+      "id": "e04-admin-billing",
+      "kind": "extend",
+      "codebase": "admin",
+      "route": "/settings/billing",
+      "prompt": "Add a Billing page to the settings section of this admin dashboard. It should show the current plan (Team, $49/month, renews 1 November 2026), the payment method (Visa ending 4242), a table of the last 6 invoices (date, amount, status, download link), and buttons to change plan or update the card. Match the existing settings pages and components."
+    },
+    {
+      "id": "e05-admin-reports",
+      "kind": "extend",
+      "codebase": "admin",
+      "route": "/reports",
+      "prompt": "Add a Reports page to this admin dashboard and put it in the sidebar. It should let the user pick a date range and show: total orders, revenue and refund rate for the range, and a table of the top 10 products by revenue. Use mock data. Match the existing pages and components."
+    },
+    {
+      "id": "r01-saas-slop",
+      "kind": "redesign",
+      "fixture": "r01-saas-slop",
+      "prompt": "This landing page for our product looks generic. Redesign it so it looks considered and distinctive. Keep the same product and facts; you can rewrite copy and restructure. Edit the files in place."
+    },
+    {
+      "id": "r02-restaurant",
+      "kind": "redesign",
+      "fixture": "r02-restaurant",
+      "prompt": "Redesign this restaurant website so it looks better and less like a template. Keep the facts (menu, hours, address). Edit the files in place."
+    },
+    {
+      "id": "r03-dashboard",
+      "kind": "redesign",
+      "fixture": "r03-dashboard",
+      "prompt": "This analytics dashboard page looks like every other dashboard. Improve its design so it's clearer and more useful for the person who checks it every morning. Keep the same data. Edit the files in place."
+    }
+  ]
+}

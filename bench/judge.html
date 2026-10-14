@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blind judging</title>
+<style>
+  :root { color-scheme: dark; --bg: #111113; --panel: #1b1b1f; --line: #2c2c33; --ink: #ececf1; --muted: #9a9aa6; --pick: #e9bd98; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.5 system-ui, sans-serif; }
+  header { position: sticky; top: 0; z-index: 2; background: var(--bg); border-bottom: 1px solid var(--line); padding: 12px 20px; display: grid; gap: 8px; }
+  .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .progress { color: var(--muted); font-variant-numeric: tabular-nums; }
+  .brief { color: var(--muted); max-width: 120ch; font-size: 13px; }
+  .brief b { color: var(--ink); font-weight: 600; }
+  button { font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px 14px; cursor: pointer; }
+  button:hover { border-color: var(--muted); }
+  button:focus-visible { outline: 2px solid var(--pick); outline-offset: 2px; }
+  button.chosen { border-color: var(--pick); color: var(--pick); }
+  kbd { font: 12px ui-monospace, monospace; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; margin-left: 6px; }
+  input[type=text] { flex: 1; min-width: 240px; font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; }
+  main { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 16px 20px 40px; }
+  figure { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  figcaption { padding: 8px 12px; color: var(--muted); border-bottom: 1px solid var(--line); }
+  .shot { max-height: calc(100vh - 210px); overflow: auto; }
+  .shot img { width: 100%; display: block; }
+  .mobile .shot img { width: 390px; max-width: 100%; margin: 0 auto; }
+  .done { padding: 60px 20px; text-align: center; color: var(--muted); }
+</style>
+</head>
+<body>
+<header>
+  <div class="row">
+    <strong>Which is the better design for this brief?</strong>
+    <span class="progress" id="progress"></span>
+    <button id="view">Show mobile <kbd>M</kbd></button>
+    <button id="prev">Back <kbd>B</kbd></button>
+  </div>
+  <div class="brief" id="brief"></div>
+  <div class="row">
+    <button data-choice="left">Left is better <kbd>1</kbd></button>
+    <button data-choice="tie">About the same <kbd>2</kbd></button>
+    <button data-choice="right">Right is better <kbd>3</kbd></button>
+    <input type="text" id="note" placeholder="Optional note: why? Then pick 1, 2 or 3">
+  </div>
+</header>
+<main id="main"></main>
+<script>
+let data, index = 0, view = "desktop";
+const $ = (id) => document.getElementById(id);
+
+async function load() {
+  data = await (await fetch("/data")).json();
+  index = data.pairs.findIndex((p) => !data.judgments[p.id]);
+  if (index < 0) index = data.pairs.length;
+  render();
+}
+
+function render() {
+  const total = data.pairs.length;
+  const judged = Object.keys(data.judgments).length;
+  $("progress").textContent = `${Math.min(index + 1, total)} of ${total} · ${judged} judged`;
+  if (index >= total) {
+    $("main").innerHTML = `<p class="done">All ${total} pairs judged. Thank you. You can close this tab.</p>`;
+    $("brief").textContent = "";
+    return;
+  }
+  const p = data.pairs[index];
+  $("brief").innerHTML = `<b>${p.kind}</b> · ${p.brief.replace(/[<>&]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" })[c])}`;
+  $("main").className = view;
+  $("main").innerHTML = ["left", "right"].map((side) => `
+    <figure><figcaption>${side === "left" ? "Left" : "Right"}</figcaption>
+    <div class="shot"><img src="${p[side][view]}" alt="${side} design, ${view} view"></div></figure>`).join("");
+  $("view").firstChild.textContent = view === "desktop" ? "Show mobile " : "Show desktop ";
+  const previous = data.judgments[p.id];
+  document.querySelectorAll("[data-choice]").forEach((b) => b.classList.toggle("chosen", previous?.choice === b.dataset.choice));
+  $("note").value = previous?.note || "";
+}
+
+async function choose(choice) {
+  const p = data.pairs[index];
+  if (!p) return;
+  const note = $("note").value.trim();
+  await fetch("/judge", { method: "POST", body: JSON.stringify({ id: p.id, choice, note }) });
+  data.judgments[p.id] = { choice, note };
+  index++;
+  view = "desktop";
+  render();
+  scrollTo(0, 0);
+}
+
+document.querySelectorAll("[data-choice]").forEach((b) => b.addEventListener("click", () => choose(b.dataset.choice)));
+$("view").addEventListener("click", () => { view = view === "desktop" ? "mobile" : "desktop"; render(); });
+$("prev").addEventListener("click", () => { index = Math.max(0, index - 1); render(); });
+document.addEventListener("keydown", (e) => {
+  if (e.target === $("note")) {
+    if (e.key === "Enter") e.preventDefault();
+    return;
+  }
+  if (e.key === "1") choose("left");
+  if (e.key === "2") choose("tie");
+  if (e.key === "3") choose("right");
+  if (e.key.toLowerCase() === "m") { view = view === "desktop" ? "mobile" : "desktop"; render(); }
+  if (e.key.toLowerCase() === "b") { index = Math.max(0, index - 1); render(); }
+});
+load();
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard – ShopPulse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">⚡ ShopPulse</div>
+    <a class="active" href="#">🏠 Dashboard</a><a href="#">📦 Orders</a><a href="#">👥 Customers</a><a href="#">📊 Analytics</a><a href="#">⚙️ Settings</a>
+  </aside>
+  <main>
+    <header class="top"><h1>Welcome back, Alex! 👋</h1><input placeholder="Search..."></header>
+
+    <section class="kpis">
+      <div class="kpi purple"><span>Revenue (yesterday)</span><strong>$18,240</strong><em>▲ 12.4% vs previous Tuesday</em></div>
+      <div class="kpi blue"><span>Orders</span><strong>412</strong><em>▲ 8.1%</em></div>
+      <div class="kpi pink"><span>Refund rate</span><strong>3.9%</strong><em>▲ 1.6 pts</em></div>
+      <div class="kpi green"><span>Avg. order value</span><strong>$44.27</strong><em>▲ 3.9%</em></div>
+    </section>
+
+    <section class="grid">
+      <div class="panel chart">
+        <h2>Revenue Overview</h2>
+        <div class="bars">
+          <div style="height:52%"></div><div style="height:61%"></div><div style="height:48%"></div><div style="height:70%"></div><div style="height:66%"></div><div style="height:58%"></div><div style="height:74%"></div>
+        </div>
+        <div class="labels"><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span><span>Mon</span><span>Tue</span></div>
+      </div>
+      <div class="panel">
+        <h2>Alerts</h2>
+        <ul class="alerts">
+          <li>⚠️ Refunds for "Linen Throw – Sage" up 4× this week (23 refunds, most cite colour mismatch)</li>
+          <li>📉 Stock: "Stoneware Mug – Ash" has 6 units left (sells ~9/day)</li>
+          <li>💳 2 payouts failed on Monday – card processor retrying</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Recent Orders</h2>
+      <table>
+        <thead><tr><th>Order</th><th>Customer</th><th>Date</th><th>Total</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>#10482</td><td>Hannah Wright</td><td>Oct 13, 09:12</td><td>$86.00</td><td><span class="pill ok">Paid</span></td></tr>
+          <tr><td>#10481</td><td>Omar Haddad</td><td>Oct 13, 08:47</td><td>$42.50</td><td><span class="pill ok">Paid</span></td></tr>
+          <tr><td>#10480</td><td>Lena Fischer</td><td>Oct 13, 08:31</td><td>$129.00</td><td><span class="pill warn">Pending</span></td></tr>
+          <tr><td>#10479</td><td>Kwame Mensah</td><td>Oct 12, 23:58</td><td>$38.00</td><td><span class="pill bad">Refunded</span></td></tr>
+          <tr><td>#10478</td><td>Sofia Rossi</td><td>Oct 12, 22:14</td><td>$64.90</td><td><span class="pill ok">Paid</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
