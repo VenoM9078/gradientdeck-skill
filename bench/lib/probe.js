@@ -77,7 +77,7 @@
     const prev = h.previousElementSibling;
     if (!prev || !visible(prev)) continue;
     const cs = getComputedStyle(prev);
-    const t = prev.innerText.trim();
+    const t = (prev.innerText || prev.textContent || "").trim();
     if (t && t.length < 40 && parseFloat(cs.fontSize) <= 14 && (cs.textTransform === "uppercase" || t === t.toUpperCase() && /[A-Z]/.test(t))) eyebrows++;
   }
 
@@ -109,7 +109,7 @@
     const ratio = contrast(fg, bg);
     if (ratio < need) {
       contrastFails++;
-      if (failSamples.length < 5) failSamples.push(`${el.tagName.toLowerCase()} "${el.innerText.trim().slice(0, 40)}" ${ratio.toFixed(2)}:1`);
+      if (failSamples.length < 5) failSamples.push(`${el.tagName.toLowerCase()} "${(el.innerText || el.textContent || "").trim().slice(0, 40)}" ${ratio.toFixed(2)}:1`);
     }
   }
 

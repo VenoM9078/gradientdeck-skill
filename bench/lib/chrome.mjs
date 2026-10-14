@@ -74,6 +74,7 @@ async function connect(wsUrl) {
     },
     async eval(expression, awaitPromise = false) {
       const r = await send("Runtime.evaluate", { expression, returnByValue: true, awaitPromise });
+      if (r.result?.exceptionDetails) this.lastError = r.result.exceptionDetails.exception?.description || r.result.exceptionDetails.text;
       return r.result?.result?.value;
     },
     async screenshot(width, maxHeight) {

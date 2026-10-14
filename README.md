@@ -20,7 +20,7 @@ The installer puts the skill in `.claude/skills` for Claude Code and in the shar
 
 **It catches generic defaults.** The patterns that make a page look generated are written down, along with why they read that way and what to do instead. None of them are banned outright; the agent can use one when your brand or brief calls for it, and it has to say so.
 
-**It never invents proof.** No fake customer logos, testimonials, ratings or "10,000+ teams" stats. If a page needs proof you haven't supplied, you get a labelled placeholder.
+**It never invents proof.** No fake customer logos, testimonials, ratings or "10,000+ teams" stats. If a page needs a fact you haven't supplied, it writes around the gap and tells you what to fill in, so the page still reads finished.
 
 **It checks its work.** If your agent has a browser tool, it renders the page at desktop, tablet and phone widths and fixes what it finds, in at most two rounds. If it doesn't, it reviews the code and tells you it couldn't look.
 

@@ -48,6 +48,7 @@ function metricTable(filter, label) {
   add("Text contrast failures (avg)", (rs) => f(mean(rendered(rs).map((r) => d(r).contrast.fails))));
   add("Horizontal overflow at 390px", (rs) => pct(rendered(rs).map((r) => r.check.mobile?.overflowX)));
   add("Cost per run (avg $)", (rs) => f(mean(rs.map((r) => r.costUsd).filter(Number.isFinite)), 2));
+  add("Tokens per run (avg k)", (rs) => f(mean(rs.map((r) => r.tokens / 1000).filter(Number.isFinite))));
   add("Time per run (avg min)", (rs) => f(mean(rs.map((r) => r.wallMs / 60000).filter(Number.isFinite))));
   return lines.join("\n");
 }

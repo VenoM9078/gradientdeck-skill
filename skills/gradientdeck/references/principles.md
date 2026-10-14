@@ -40,6 +40,7 @@ Contrast of size, weight, value, color, density and space directs the eye. A pag
 - Spend boldness in one place. A page can carry one strong idea: a striking type treatment, an unusual layout, a saturated color field, a distinctive image. Two or three at once compete and read as noise.
 - Every element earns its place. For each section, card, icon, divider, badge and animation, ask what breaks if it's removed. If nothing breaks, remove it.
 - Decoration without a job is the fastest way to look generated. Gradients, glows, blobs, grain, icons in tiles and section dividers all need a reason that comes from the subject.
+- Restraint is not drabness. A page with no color, no depth and no imagery doesn't look considered; it looks unfinished. Keep the warmth and richness the subject offers.
 
 ## Consistency beats novelty in Operate mode
 

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.2
+
+From the first benchmark round: blind human judging preferred pages made without the skill on greenfield sites, mostly because skill pages showed "[to be supplied]" gaps and looked drab.
+
+- **Pages read finished.** Missing facts are written around or left out, never printed as bracketed placeholders. Gaps go in HTML comments and the final report. (`SKILL.md`, `copy.md`, `imagery.md`, `polish.md`)
+- **Honesty is not austerity.** Restraint means one bold move, not none; warmth, color and imagery that come from the subject are welcome. (`SKILL.md`, `principles.md`)
+- **Warm palettes allowed when the subject calls for them.** The cream-serif-rust tell now fires only when that look is picked by habit. New tells: drab out of caution, visible placeholders. (`tells.md`)
+- **Polish checks** for strings assembled in code and for drawers or menus stuck open. (`polish.md`)
+
 ## 0.1.1
 
 - **Every choice has a source.** Each major design choice now names where it came from: the brief, the subject, the existing system, or a requirement. A choice with no source is treated as a default. (`principles.md`, design note in `SKILL.md`)

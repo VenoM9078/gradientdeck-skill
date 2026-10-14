@@ -61,9 +61,9 @@ Words are part of the interface. They decide whether a page says something only 
 
 ### Honesty
 
-- NEVER invent claims, metrics, customer names, quotes or ratings (SKILL.md rule). Missing facts become labelled placeholders: `[Pricing: to be confirmed]`.
+- NEVER invent claims, metrics, customer names, quotes or ratings (SKILL.md rule).
 - NEVER write urgency or scarcity that isn't true ("Only 2 left", countdown timers on evergreen offers).
-- Placeholders MUST look like placeholders: bracketed and labelled, so nobody ships them by accident. No realistic-looking lorem ipsum in final copy.
+- Write around missing facts instead of printing gaps. No date yet: "New dates go out to the list first". No price: "Ask for a quote". No email: the contact form or the channel the user did give. If a sentence can't stand without the fact, cut the sentence. Mark the spot with an HTML comment and list it in your report. No bracketed placeholders, "TBD" or lorem ipsum in visible text.
 
 ### Length and readability
 
@@ -99,6 +99,6 @@ The general cadence tells (hype words, "not just X but Y", triplets, em-dash rhy
 - [ ] Every error says what happened and what to do, without a bare code or blame.
 - [ ] Every empty state offers a next action; filtered-empty offers "Clear filters".
 - [ ] Numbers and dates are locale-formatted, units consistent, dates unambiguous.
-- [ ] No invented claims; every missing fact is a bracketed, labelled placeholder.
+- [ ] No invented claims; missing facts are written around or cut, never shown as placeholders, and listed in the report.
 - [ ] One case style for labels; no placeholder used as a label.
 - [ ] No sentence survives that loses nothing when deleted.

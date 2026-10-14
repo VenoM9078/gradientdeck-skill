@@ -10,7 +10,9 @@ For each: what it looks like → why it reads as generic → what to do instead 
 - **Gradient-filled headlines** (`background-clip: text`) → decoration standing in for an idea; often hurts legibility → let size, weight and layout carry the headline; if color must carry it, use one solid committed color → fine for a single display word in an established brand system, with contrast checked at every point of the gradient.
 - **Glows, soft blobs, aurora backgrounds** behind the hero → atmosphere with no source → if the page needs atmosphere, take it from the subject (a photograph, a texture, a material) → fine in a genuinely atmospheric genre (music, nightlife, games) when it's the one bold move.
 - **Pure #000 or #fff as the base, or neutral gray everywhere** → untinted neutrals look unconsidered → tint neutrals slightly toward the brand hue → fine when the product's system already uses true neutrals.
-- **The safe "tasteful" palette** (warm cream background, serif headline, terracotta or rust accent; or near-black with one acid-green accent) → these became the default "distinctive" look and are now generic too → treat any palette that feels instantly "designery" as spent; derive yours from the subject.
+- **The same "tasteful" palette on every subject** (warm cream, serif headline, rust accent; or near-black with one acid-green accent) → generic when it's picked by habit rather than by the subject → derive the palette from the subject. If the subject really is warm and handmade (a bakery, a pottery), paper tones and a serif can be the right call; make them specific (the actual clay, glaze or crust colors), not a stock rust.
+- **Drab out of caution**: greige everything, flat surfaces, no imagery, chosen to avoid looking generated → reads lifeless and unfinished, and people pick the warmer page → restraint means one bold move, not none; give the page color, depth and imagery that come from the subject.
+- **Visible placeholders** ("[Photo: to be supplied]", "TBD", "email to be confirmed") → the page reads unfinished to every visitor → write copy that works without the fact, leave the element out, or draw the subject; note the gap in a comment and in your report.
 - **Glassmorphism on everything** (frosted cards over gradients) → effect without a reason → use translucency only where something real sits behind it.
 - **A hairline border plus a wide, soft shadow on every card** → two boundaries doing one job, now a common generated finish → pick one way to separate the surface (border, tint or shadow) and use it consistently.
 
@@ -49,7 +51,7 @@ For each: what it looks like → why it reads as generic → what to do instead 
 - **Emoji as icons or bullet points** → unfinished → use one consistent icon set, or no icons.
 - **Fake browser windows, phone frames and editor chrome** around content → costume → show the real thing, or a real screenshot.
 - **Abstract 3D shapes, isometric illustrations and stock "team at laptop" photos** → interchangeable imagery → use real product screenshots, real photography of the subject, or no image.
-- **Invented social proof**: logo walls of companies that aren't customers, made-up testimonials, "trusted by thousands" → dishonest and recognisable → NEVER; use labelled placeholders.
+- **Invented social proof**: logo walls of companies that aren't customers, made-up testimonials, "trusted by thousands" → dishonest and recognisable → NEVER; choose a structure that doesn't need proof, and tell the user what proof would help.
 
 ## Copy
 

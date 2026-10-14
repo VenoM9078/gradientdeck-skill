@@ -13,10 +13,11 @@ For each pair, decide which design better serves **this brief**, as a demanding 
 
 1. **Does it do the job?** The page's purpose in the brief (preorders, downloads, bookings, donations, finding information, matching an existing app) is obvious and easy to act on.
 2. **Is it specific?** It looks designed for this subject, not like a template with the name swapped. Generic patterns (purple-blue gradients, gradient headlines, centered hero with two buttons, three identical icon cards, invented stats or testimonials, emoji icons) count against a design unless the brief calls for them.
-3. **Is it honest?** Invented metrics, customer logos, testimonials or product facts the brief didn't supply are a serious flaw.
-4. **Is it well crafted?** Hierarchy, typography, spacing, color, contrast, consistency, and whether the mobile layout holds up.
-5. **For extend tasks:** does the new page look like it belongs to the existing app (same components, spacing, type and color), rather than a different product bolted on?
-6. **For redesigns:** is it clearly better than a generic starting point while keeping the facts?
+3. **Is it honest?** Invented proof (metrics, customer logos, testimonials, ratings) is a serious flaw. Small invented operational details (a phone number, a session time) are a minor flaw.
+4. **Does it look finished?** Judge it as a visitor would. Visible placeholders ("[to be supplied]", "TBD"), empty slots, broken strings and drawers stuck open make a page look unfinished, and that counts against it as much as a minor invented detail.
+5. **Is it well crafted?** Hierarchy, typography, spacing, color, contrast, consistency, and whether the mobile layout holds up.
+6. **For extend tasks:** does the new page look like it belongs to the existing app (same components, spacing, type and color), rather than a different product bolted on?
+7. **For redesigns:** is it clearly better than a generic starting point while keeping the facts?
 
 Choose `left`, `right` or `tie`. Use `tie` only when you genuinely can't prefer one; a small but real preference is still a choice. Don't favor more content, more decoration or more color for their own sake. Judge what's on screen, not what you imagine the code is.
 

@@ -88,7 +88,9 @@ const runs = [];
 for (const taskId of existsSync(runsDir) ? readdirSync(runsDir).filter((n) => statSync(join(runsDir, n)).isDirectory()) : []) {
   for (const armRep of readdirSync(join(runsDir, taskId))) {
     const dir = join(runsDir, taskId, armRep);
-    if (existsSync(join(dir, "run.json")) && (force || !existsSync(join(dir, "check.json")))) runs.push(dir);
+    if (!existsSync(join(dir, "run.json")) || (!force && existsSync(join(dir, "check.json")))) continue;
+    if (JSON.parse(readFileSync(join(dir, "run.json"), "utf8")).stub) continue; // prepared, not run yet
+    runs.push(dir);
   }
 }
 console.log(`Checking ${runs.length} runs in ${round}`);
@@ -112,6 +114,8 @@ for (const dir of runs) {
     }
     await new Promise((r) => setTimeout(r, 1500));
     result.desktop = await page.eval(probe);
+    if (!result.desktop) { await new Promise((r) => setTimeout(r, 3000)); result.desktop = await page.eval(probe); }
+    if (!result.desktop) throw new Error("page probe failed: " + String(page.lastError || "no value").split(/\r?\n/).slice(0, 2).join(" "));
     writeFileSync(join(dir, "shot-1440.jpg"), await page.screenshot(1440, 7000));
     await page.goto(url, 390, 844, 2000);
     result.mobile = await page.eval(probe);

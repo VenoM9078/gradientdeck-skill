@@ -43,8 +43,9 @@ Your taste fills only the gaps these leave.
 
 ## 2. Rules that always apply
 
-- **NEVER invent proof.** No made-up metrics, customer logos, testimonials, ratings, user counts, press quotes or awards. If the page needs proof the user hasn't given, use a clearly labelled placeholder (`[Customer quote: to be supplied]`) or choose a structure that doesn't depend on proof.
-- **NEVER invent product facts.** Features, prices, integrations and dates come from the user or the codebase. If missing, ask or leave a labelled placeholder.
+- **NEVER invent proof.** No made-up metrics, customer logos, testimonials, ratings, user counts, press quotes or awards. If the page needs proof the user hasn't given, choose a structure that doesn't depend on it.
+- **NEVER invent product facts.** Features, prices, integrations and dates come from the user or the codebase. If one is missing, write copy that works without it ("Spring dates go out by email first", not a made-up date) or leave the element out.
+- **MUST ship a page that reads finished.** No bracketed placeholders, "TBD" or "to be supplied" in visible text. Put a short HTML comment where missing content belongs, and list every gap in your report. Honesty is not austerity: warmth, color, illustration and rich detail are welcome when they come from the subject.
 - **MUST meet the accessibility floor.** Text contrast of at least 4.5:1 (3:1 for text 24px and up, or 19px and up when bold). Visible focus on every interactive element. Every animation has a reduced-motion version. Interactive targets of at least 24×24px, and 44×44px on touch surfaces. Meaning is never carried by color alone.
 - **MUST use the system.** Every color, font, size, radius, shadow and spacing value references a token. If you need a new value, add it to the tokens on purpose; never inline a one-off.
 - **SHOULD spend boldness in one place.** Decide the single thing this page will be remembered for. Keep everything else quiet enough to let it work.
@@ -104,4 +105,4 @@ All reference files are in the `references/` folder next to this file.
 
 ## 6. Reporting back
 
-End every design task with: what you built, which decisions you made and why (two or three lines), anything you couldn't verify, and any placeholders the user needs to fill. Keep it short. Don't grade your own work with scores.
+End every design task with: what you built, which decisions you made and why (two or three lines), anything you couldn't verify, and the facts you wrote around or left out so the user can supply them. Keep it short. Don't grade your own work with scores.

@@ -62,7 +62,9 @@ The final craft pass on UI that already works. Polish changes details, not decis
 
 - Cut words that don't change meaning. Buttons name the action. Error messages say what happened and what to do (`copy.md`).
 - Consistent case (sentence or title) and terminology across the page.
-- No placeholder text left unlabelled; every placeholder the user must fill is listed in your report.
+- No visible placeholders ("[…]", "TBD", "to be supplied"); every gap is an HTML comment and is listed in your report.
+- Read strings your code assembles (button labels, totals, counts) as they render: spaces, plurals, units. "Add mug inash" ships easily.
+- Open and close every drawer, modal and menu once; nothing may be stuck open on load.
 
 ### 9. Craft floor
 

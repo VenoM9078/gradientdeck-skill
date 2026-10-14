@@ -11,7 +11,7 @@ Photographs, screenshots, illustration, icons and logos. Images are the fastest 
    - **Identity:** says who this is (a founder portrait, the workshop, the logo).
    If it plays none of these, it's filler. Cut it.
 2. **What real material exists?** Ask the user and check the codebase before using anything else. Real beats polished.
-3. **If nothing real exists:** a labelled placeholder, a structure that doesn't need the image, or openly licensed imagery of the actual subject, in that order of preference.
+3. **If nothing real exists:** a structure that doesn't need the image, a drawing of the actual subject (SVG shapes of the product, a diagram of the process), or openly licensed imagery of the subject, in that order of preference.
 4. **What single treatment will every image share?** Decide crop, color grade, framing and corners once.
 
 ## Rules
@@ -25,7 +25,7 @@ Photographs, screenshots, illustration, icons and logos. Images are the fastest 
 ### Honesty
 
 - NEVER present invented people, testimonials, team members or customer logos as real. NEVER use a company's logo without permission or a real relationship (see `SKILL.md`).
-- MUST label placeholders visibly in the layout: `[Product screenshot: dashboard with live data]`, `[Photo: the kitchen during service]`. Size them as the final image will be.
+- When a real image will come later, give it a finished-looking slot at its final size (a drawing, a tinted panel with the subject's texture), never visible "[Photo: …]" text. Note what belongs there in an HTML comment and in your report.
 - AVOID fake device, browser or editor frames around content (`tells.md`). A real screenshot may get a frame only when it needs one to be understood, and then a plain one. NEVER frame a mockup so it passes for a shipped product.
 - NEVER pass off generated images as photographs of real places, products or people.
 
@@ -85,7 +85,7 @@ Photographs, screenshots, illustration, icons and logos. Images are the fastest 
 ## Check
 
 - Each image has a named role (evidence, atmosphere, explanation, identity).
-- No invented people, quotes or logos; placeholders are labelled and correctly sized.
+- No invented people, quotes or logos; slots for images still to come look finished and are correctly sized.
 - No fake device or browser chrome.
 - One icon set, one stroke weight, on a size grid; no emoji icons; icon-only buttons have accessible names.
 - Every image has `width`/`height` or `aspect-ratio`; below-fold images lazy-load; the LCP image does not.
