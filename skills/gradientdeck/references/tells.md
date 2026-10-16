@@ -2,6 +2,8 @@
 
 Patterns that make a page read as template or AI output. None is banned; each is a **default**, and defaults are what you reach for when nothing about the product has been considered. Use one only when the subject or the existing system calls for it, and say why in your design note.
 
+Genre conventions are not tells: a shop with product cards, a developer tool with a terminal session, docs with a sidebar. A convention turns into a tell when it's filler, careless, or doesn't fit the subject.
+
 For each: what it looks like → why it reads as generic → what to do instead → when it's fine.
 
 ## Color and surface
@@ -28,7 +30,7 @@ For each: what it looks like → why it reads as generic → what to do instead 
 ## Layout and composition
 
 - **Centered hero, full viewport height, headline + subline + two buttons** → the default first screen → decide what the visitor must see first for this product (see `composition.md`); often it's the product itself, a real image or a concrete statement, laid out asymmetrically.
-- **Hero → three feature cards → testimonial → CTA → footer** → the default skeleton → choose a page structure on purpose from `composition.md`, and make it differ from the last build on at least two axes.
+- **Hero → three feature cards → testimonial → CTA → footer** → the default skeleton → keep the sections the reader needs, in the order they need them, and make each one specific to the product (`composition.md`).
 - **A row of three identical cards, each with an icon in a rounded tile, a bold title and two lines** → filler that looks like content → if features matter, show them (screenshot, demo, example); if they don't, cut them; vary weight when items differ in importance.
 - **Cards inside cards; borders around everything** → boxes as decoration → use space and alignment to group; a border or surface change should mark a real boundary.
 - **Thick colored left border on cards or callouts** → a template signature → use background tint or position to mark emphasis.
@@ -49,7 +51,7 @@ For each: what it looks like → why it reads as generic → what to do instead 
 ## Imagery and content
 
 - **Emoji as icons or bullet points** → unfinished → use one consistent icon set, or no icons.
-- **Fake browser windows, phone frames and editor chrome** around content → costume → show the real thing, or a real screenshot.
+- **Fake browser windows, phone frames and editor chrome** around content → costume → show the real thing, or a real screenshot → fine: a terminal block showing the actual commands and output.
 - **Abstract 3D shapes, isometric illustrations and stock "team at laptop" photos** → interchangeable imagery → use real product screenshots, real photography of the subject, or no image.
 - **Invented social proof**: logo walls of companies that aren't customers, made-up testimonials, "trusted by thousands" → dishonest and recognisable → NEVER; choose a structure that doesn't need proof, and tell the user what proof would help.
 

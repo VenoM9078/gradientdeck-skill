@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.3
+
+Round 2 showed the skill steering strong models away from layouts they already do well, and the review step almost never running (1 critique-file read in 108 runs).
+
+- **Draft, then taste-test.** The workflow is now note → draft with your own judgment → taste-test → fix. The taste-test checklist (job, layout, proportion, specificity, finish, floor) lives in `SKILL.md` and runs with or without a browser, and its findings go in the reply. References open when a check fails. (`SKILL.md`)
+- **Genre conventions are fine.** Product cards on a shop or a terminal session on a dev tool aren't tells; filler or careless use is. Direction work runs for redesigns, on request, or when a draft reads generic. (`SKILL.md`, `tells.md`, `direction.md`)
+- **Keep a good draft.** Don't redesign a page that passes the taste-test just to make it more distinctive.
+- **`DESIGN.md` only when setting up a system**, not for every single page.
+
 ## 0.1.2
 
 From the first benchmark round: blind human judging preferred pages made without the skill on greenfield sites, mostly because skill pages showed "[to be supplied]" gaps and looked drab.

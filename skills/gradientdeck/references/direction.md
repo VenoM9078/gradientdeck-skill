@@ -2,7 +2,7 @@
 
 How to choose a visual direction for New world work: greenfield builds and redesigns. A direction is a set of linked decisions with one idea underneath, not a mood. Done well, it gives every later choice something to be tested against.
 
-Skip this file in Extend and New surface: the existing system is the direction (`extend.md`).
+Use it for redesigns, when the user asks for a distinct look, or when a first draft reads generic. A clear, conventional page done well doesn't need a new direction. Skip this file in Extend and New surface: the existing system is the direction (`extend.md`).
 
 ## Decide
 

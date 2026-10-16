@@ -19,7 +19,7 @@ Answer these three questions in order. They decide everything that follows.
 |---|---|---|
 | **Extend** | The codebase already has UI, and you're adding or changing a page or component in that look | Inherit everything. No new direction. Load `extend.md` |
 | **New surface** | The codebase has a look, but this is a new kind of page (first pricing page, first docs) | Inherit tokens and components. Decide structure only. Load `extend.md`, then `composition.md` |
-| **New world** | Greenfield, or the user asked for a redesign | Decide a direction first. Load `direction.md` |
+| **New world** | Greenfield, or the user asked for a redesign | Start from what this kind of page needs and build it well. Load `direction.md` for a redesign, when the user asks for a distinct look, or when your draft reads generic |
 
 If you can't tell, look: a `DESIGN.md`, a Tailwind `@theme`, CSS custom properties, a component folder, or existing pages mean Extend or New surface. When in doubt, ask one question rather than guess.
 
@@ -48,18 +48,25 @@ Your taste fills only the gaps these leave.
 - **MUST ship a page that reads finished.** No bracketed placeholders, "TBD" or "to be supplied" in visible text. Put a short HTML comment where missing content belongs, and list every gap in your report. Honesty is not austerity: warmth, color, illustration and rich detail are welcome when they come from the subject.
 - **MUST meet the accessibility floor.** Text contrast of at least 4.5:1 (3:1 for text 24px and up, or 19px and up when bold). Visible focus on every interactive element. Every animation has a reduced-motion version. Interactive targets of at least 24×24px, and 44×44px on touch surfaces. Meaning is never carried by color alone.
 - **MUST use the system.** Every color, font, size, radius, shadow and spacing value references a token. If you need a new value, add it to the tokens on purpose; never inline a one-off.
-- **SHOULD spend boldness in one place.** Decide the single thing this page will be remembered for. Keep everything else quiet enough to let it work.
-- **SHOULD vary structure, not just paint.** Two different products should not share the same page skeleton with different colors. See `composition.md`.
-- **AVOID the generic defaults** listed in `tells.md`. They're not banned; they're defaults. Use one only when the brief or the existing system calls for it, and say so.
-- **AVOID drawing a fake environment.** No pretend browser bars, traffic-light dots, phone frames or code-editor chrome around content, unless you're showing a real screenshot that needs a frame to be understood (`imagery.md`).
+- **SHOULD keep the structure people expect, and make it specific.** Use the conventions of the genre: a shop has product cards, a developer tool shows a terminal session, docs have a sidebar. Make the content, type, color and one signature detail belong to this product. Change structure only when it serves the reader better.
+- **SHOULD spend boldness in one place**, and only where it helps. A clear, well-crafted page with no bold move beats a clever one that's awkward to use.
+- **AVOID the generic defaults** listed in `tells.md`. A default is a problem when it's filler or careless, not when the genre calls for it.
+- **AVOID drawing a fake environment.** No pretend browser bars, traffic-light dots or phone frames around content, unless you're showing a real screenshot that needs a frame (`imagery.md`). A terminal block that shows the real commands is content, not costume.
 
 ## 3. Work in this order
 
-1. **Note.** Before writing code, write a short design note (5–10 lines) in your reply: situation, mode, what you're inheriting, the direction or the single bold move, and what you considered and rejected. Rejected options are required; they prove a decision was made. Each major choice names its source: the brief, the subject, the existing system, or a requirement (`principles.md`). In Extend and New surface, the note is the pre-flight contract in `extend.md`.
-2. **Build.** Follow the primitives. Reuse existing components before writing new ones. Copy is part of the design (`copy.md`).
-3. **Look.** Verify the rendered result, not just the code. If a browser tool is available (a Playwright, Chrome DevTools or browser-preview tool), render at 1440, 768 and 390 pixels wide and look at each, plus 320 to catch overflow. If none is available, say so and check the code against `review.md` instead.
-4. **Fix.** Fix what the check found. **Stop after two rounds** of look-and-fix; report anything left over rather than looping.
-5. **Record.** For New world work, write `DESIGN.md` after the first build (see `design-md.md`). For any decision that should hold next time, add a dated line to `.gradientdeck/decisions.md`. Scoped ignores for review findings go in `.gradientdeck/config.json`. Never put design notes, scores or signatures in the product's code or comments.
+1. **Note.** Before writing code, write a short note (3–5 lines) in your reply: situation, mode, what you're inheriting, the conventions you'll follow, and the one thing you'll make specific to this product. In Extend and New surface, the note is the pre-flight contract in `extend.md`.
+2. **Draft.** Build the whole thing with your own judgment. Reuse existing components before writing new ones. Copy is part of the design (`copy.md`).
+3. **Taste-test.** Always do this, then write it in your reply as a short `Review:` list of what you found and fixed. If a browser tool is available (Playwright, Chrome DevTools, a preview tool), render at 1440, 768 and 390 pixels and look. If not, read your markup and styles as a renderer would. Check:
+   - **Job:** the main action is obvious on the first screen.
+   - **Layout:** one container width; sections share the same edges; related things sit closer together than unrelated things; gaps come from one spacing scale, and the same relationship always gets the same gap; nothing floats unanchored or crowds an edge.
+   - **Proportion:** headings suit the amount of content; columns balance; nothing is oversized, cramped or stranded in empty space.
+   - **Specific:** something on the page could only belong to this product.
+   - **Finished and honest:** no invented proof, no placeholders, no broken strings, nothing stuck open.
+   - **Floor:** contrast, visible focus, and the 390px layout holds (no overflow; wide tables reflow or scroll).
+   For each failure, open the reference for that primitive (`space-and-layout.md`, `typography.md`, `composition.md`, `tells.md`, `direction.md` if it reads generic) and fix it. If the draft passes, keep it; don't redesign a good page to make it more distinctive.
+4. **Fix.** **Stop after two rounds** of test-and-fix; report anything left over rather than looping.
+5. **Record.** Write `DESIGN.md` when you're setting up a product's system (several pages, or the user asked); skip it for a single page. For any decision that should hold next time, add a dated line to `.gradientdeck/decisions.md`. Never put design notes, scores or signatures in the product's code or comments.
 
 ## 4. Commands
 

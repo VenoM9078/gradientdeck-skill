@@ -87,7 +87,7 @@
   // Repeated identical card rows: 3+ siblings with the same tag/class and similar size.
   let cardRows = 0;
   for (const el of all) {
-    const kids = [...el.children].filter(visible);
+    const kids = Array.from(el.children || []).filter(visible);
     if (kids.length < 3 || kids.length > 6) continue;
     const sig = (k) => k.tagName + "|" + k.className + "|" + Math.round(k.getBoundingClientRect().width / 10);
     if (new Set(kids.map(sig)).size === 1 && kids[0].getBoundingClientRect().width < vw * 0.4 && kids[0].querySelector("h3,h4,strong")) cardRows++;

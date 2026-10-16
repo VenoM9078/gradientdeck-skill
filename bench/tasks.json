@@ -106,6 +106,12 @@
       "kind": "redesign",
       "fixture": "r03-dashboard",
       "prompt": "This analytics dashboard page looks like every other dashboard. Improve its design so it's clearer and more useful for the person who checks it every morning. Keep the same data. Edit the files in place."
+    },
+    {
+      "id": "g11-gradientdeck",
+      "kind": "greenfield",
+      "exploratory": true,
+      "prompt": "Design and build the homepage for GradientDeck (gradientdeck.com), a free website of CSS generators for front-end developers and designers. No sign-up. Every tool gives you code to copy. Tools, in three groups. Backgrounds and surfaces: background gradients (CSS, Tailwind, AI prompt), text gradients (CSS, Tailwind), mesh gradients (CSS, PNG), pattern backgrounds (React, Tailwind), liquid glass (CSS, Tailwind, AI prompt), box shadows (CSS, Tailwind), blobs (SVG). Motion: CSS animations (CSS), animated icons (React/TSX). Color: color palette generator (HEX, RGB, HSL), image color picker (HEX, RGB, HSL), palette visualizer (previews a palette on real UI), Tailwind colors (HEX, RGB, HSL, OKLCH). It also has a Figma plugin and an MCP server so AI coding assistants can use the tools, and a journal with articles on color and CSS. The page should make it obvious what you can make here and get people into a tool fast. Each tool lives at its own URL; link to them as /tool-name placeholders."
     }
   ]
 }
