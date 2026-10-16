@@ -32,5 +32,12 @@
     "design-system"
   ],
   "homepage": "https://gradientdeck.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VenoM9078/gradientdeck-skill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VenoM9078/gradientdeck-skill/issues"
+  },
   "license": "MIT"
 }
