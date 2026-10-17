@@ -1,7 +1,7 @@
 {
   "name": "gradientdeck",
   "version": "0.1.3",
-  "description": "Design judgment for coding agents. An Agent Skill that teaches typography, color, layout, motion, copy and review, with generic AI defaults caught at every step.",
+  "description": "Design judgment for coding agents: an Agent Skill that makes the pages they build look made, not generated. Works with Claude Code, Codex, Cursor and Copilot.",
   "type": "module",
   "bin": {
     "gradientdeck": "bin/gradientdeck.mjs"
@@ -21,15 +21,19 @@
   },
   "keywords": [
     "agent-skill",
-    "skill",
-    "design",
-    "ui",
-    "frontend",
+    "agent-skills",
     "claude-code",
     "codex",
     "cursor",
+    "copilot",
+    "ai-agents",
+    "design",
+    "web-design",
+    "ui",
+    "frontend",
     "typography",
-    "design-system"
+    "design-system",
+    "css"
   ],
   "homepage": "https://gradientdeck.com",
   "repository": {
@@ -39,5 +43,6 @@
   "bugs": {
     "url": "https://github.com/VenoM9078/gradientdeck-skill/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "author": "GradientDeck (https://gradientdeck.com)"
 }

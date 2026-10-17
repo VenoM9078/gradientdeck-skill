@@ -1,5 +1,7 @@
 # GradientDeck
 
+[![npm](https://img.shields.io/npm/v/gradientdeck)](https://www.npmjs.com/package/gradientdeck) [![license](https://img.shields.io/npm/l/gradientdeck)](LICENSE)
+
 Design judgment for coding agents.
 
 Ask an agent to build a landing page and you usually get the same page: centered hero, purple gradient, three cards with icons in rounded squares, a row of made-up stats. Ask it to add a page to your app and it often ignores the components and tokens you already have.
@@ -63,7 +65,7 @@ The installer has no dependencies, makes no network requests and collects nothin
 
 ## Contributing
 
-Read [AUTHORING.md](AUTHORING.md) before changing the skill. The short version: describe how to choose, never what to choose; scope every rule to a context; make every rule checkable. `npm test` checks size budgets and a few content rules.
+Read [AUTHORING.md](https://github.com/VenoM9078/gradientdeck-skill/blob/main/AUTHORING.md) before changing the skill. The short version: describe how to choose, never what to choose; scope every rule to a context; make every rule checkable. `npm test` checks size budgets and a few content rules.
 
 ## License
 
