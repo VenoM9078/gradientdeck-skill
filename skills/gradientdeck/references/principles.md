@@ -37,7 +37,7 @@ Contrast of size, weight, value, color, density and space directs the eye. A pag
 
 ## Restraint
 
-- Spend boldness in one place. A page can carry one strong idea: a striking type treatment, an unusual layout, a saturated color field, a distinctive image. Two or three at once compete and read as noise.
+- One idea per page, committed everywhere. The idea can set the palette, the type and the structure of the whole page; what stays single is the stunt (a striking type treatment, an unusual layout move, a distinctive image). Two or three stunts at once compete and read as noise.
 - Every element earns its place. For each section, card, icon, divider, badge and animation, ask what breaks if it's removed. If nothing breaks, remove it.
 - Decoration without a job is the fastest way to look generated. Gradients, glows, blobs, grain, icons in tiles and section dividers all need a reason that comes from the subject.
 - Restraint is not drabness. A page with no color, no depth and no imagery doesn't look considered; it looks unfinished. Keep the warmth and richness the subject offers.
@@ -53,6 +53,10 @@ Design that implies something false is broken design, however it looks. No inven
 ## The first idea is spent
 
 Your first instinct for any visual choice (the first typeface that comes to mind, the first palette, the first layout) is probably the most common one, which makes it the most generic. Treat it as a reference point, not an answer. Generate alternatives, then choose the one that best fits the subject, which may still be the first one, but now it's a choice with a reason.
+
+## Commit
+
+In New world work, the softened version of a direction is the most common failure: the idea shows up in the hero and the rest of the page turns back into the category default. Build the direction you chose, at full strength. When torn between refined and committed, commit. If the user wants it safer, they'll say so, and the re-roll offer at the end of every New world build gives them the door (`direction.md`).
 
 ## Steering verbs
 

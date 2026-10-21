@@ -4,7 +4,22 @@ Patterns that make a page read as template or AI output. None is banned; each is
 
 Genre conventions are not tells: a shop with product cards, a developer tool with a terminal session, docs with a sidebar. A convention turns into a tell when it's filler, careless, or doesn't fit the subject.
 
-For each: what it looks like → why it reads as generic → what to do instead → when it's fine.
+The looks and fonts in the first two sections are common because they work. They are allowed. What reads as generated is a page that is only one of them, with nothing on it that belongs to this product. Swapping one for a loud or odd alternative just to look different makes a worse page.
+
+## Looks every model reaches for
+
+Four complete looks every model reaches for. Use one when it suits the product, and make the page specific through its content, its object and its finish.
+
+- **Warm cream ground, a high-contrast serif display, a terracotta or rust accent.** The default for anything handmade, local or "artisan": bakeries, coffee, ceramics, wellness, books.
+- **Near-black ground with one neon accent** (acid green, electric blue, hot orange), usually with monospace labels. The default for developer tools, AI and anything "technical".
+- **The broadsheet**: hairline rules, zero radius, dense columns, an italic serif and tracked small caps or monospace. The default "serious" alternative to the two above.
+- **Flat saturated blocks with hard offset shadows** and a condensed display face. The default "playful" alternative.
+
+## Fonts every model reaches for
+
+Fraunces, Playfair Display, Cormorant, Lora, Crimson, Newsreader, EB Garamond, DM Serif, Syne, Space Grotesk, Space Mono, IBM Plex (all three), JetBrains Mono as decoration, Inter or Geist as a display face, DM Sans, Outfit, Manrope, Plus Jakarta Sans, Instrument Sans and Instrument Serif. These are good faces, and fine to use. Pick type by rendering two pairings and keeping the better one (`typography.md`), not by avoiding names.
+
+For the rest: what it looks like → why it reads as generic → what to do instead → when it's fine.
 
 ## Color and surface
 
@@ -12,7 +27,6 @@ For each: what it looks like → why it reads as generic → what to do instead 
 - **Gradient-filled headlines** (`background-clip: text`) → decoration standing in for an idea; often hurts legibility → let size, weight and layout carry the headline; if color must carry it, use one solid committed color → fine for a single display word in an established brand system, with contrast checked at every point of the gradient.
 - **Glows, soft blobs, aurora backgrounds** behind the hero → atmosphere with no source → if the page needs atmosphere, take it from the subject (a photograph, a texture, a material) → fine in a genuinely atmospheric genre (music, nightlife, games) when it's the one bold move.
 - **Pure #000 or #fff as the base, or neutral gray everywhere** → untinted neutrals look unconsidered → tint neutrals slightly toward the brand hue → fine when the product's system already uses true neutrals.
-- **The same "tasteful" palette on every subject** (warm cream, serif headline, rust accent; or near-black with one acid-green accent) → generic when it's picked by habit rather than by the subject → derive the palette from the subject. If the subject really is warm and handmade (a bakery, a pottery), paper tones and a serif can be the right call; make them specific (the actual clay, glaze or crust colors), not a stock rust.
 - **Drab out of caution**: greige everything, flat surfaces, no imagery, chosen to avoid looking generated → reads lifeless and unfinished, and people pick the warmer page → restraint means one bold move, not none; give the page color, depth and imagery that come from the subject.
 - **Visible placeholders** ("[Photo: to be supplied]", "TBD", "email to be confirmed") → the page reads unfinished to every visitor → write copy that works without the fact, leave the element out, or draw the subject; note the gap in a comment and in your report.
 - **Glassmorphism on everything** (frosted cards over gradients) → effect without a reason → use translucency only where something real sits behind it.
@@ -20,8 +34,7 @@ For each: what it looks like → why it reads as generic → what to do instead 
 
 ## Type
 
-- **One sans-serif for everything, at default weights** → no voice → choose type by procedure (`typography.md`): from the subject's vernacular, with real contrast between roles.
-- **Swapping the most common font for the second most common** → still the default, one step removed → if you can name the face you're avoiding, you're probably about to choose its neighbour; go back to the subject.
+- **One sans-serif for everything, at default weights** → no voice → choose type by procedure (`typography.md`), with real contrast between roles.
 - **A small all-caps label above every heading** ("FEATURES", "HOW IT WORKS") → template chrome → use it only where it adds information the heading doesn't; most headings need nothing above them.
 - **An italic or colored "emphasis word" in every headline** → a formula → if a headline needs emphasis, rewrite it.
 - **Monospace labels and metadata strings ("v2.0 · 2026 · open source", "DESIGN · BUILD · SHIP", "WORD — fragment") for flavour** → borrowed technical and editorial costume → use monospace only for actual code, data or values; write labels as plain words.
@@ -32,11 +45,9 @@ For each: what it looks like → why it reads as generic → what to do instead 
 - **Centered hero, full viewport height, headline + subline + two buttons** → the default first screen → decide what the visitor must see first for this product (see `composition.md`); often it's the product itself, a real image or a concrete statement, laid out asymmetrically.
 - **Hero → three feature cards → testimonial → CTA → footer** → the default skeleton → keep the sections the reader needs, in the order they need them, and make each one specific to the product (`composition.md`).
 - **A row of three identical cards, each with an icon in a rounded tile, a bold title and two lines** → filler that looks like content → if features matter, show them (screenshot, demo, example); if they don't, cut them; vary weight when items differ in importance.
-- **Cards inside cards; borders around everything** → boxes as decoration → use space and alignment to group; a border or surface change should mark a real boundary.
-- **Thick colored left border on cards or callouts** → a template signature → use background tint or position to mark emphasis.
+- **Cards inside cards; borders around everything; a thick colored left border on cards** → boxes as decoration → use space and alignment to group; a border or surface change should mark a real boundary.
 - **Bento grid of mismatched tiles** as a default feature layout → fine only when the tiles hold real, varied content of different importance.
 - **Numbered section markers (01 / 02 / 03) on content that isn't a sequence** → borrowed structure → number only real steps, ranks or chapters.
-- **The hairline-ruled "broadsheet" look** (zero radius, thin rules everywhere, dense newspaper columns) as the default "serious" style → it became the tasteful alternative and is now a default too → use it only when the content is genuinely editorial and the structure follows from it.
 - **Stat row of big numbers** ("10k+ users · 99.9% uptime · 24/7 support") → usually invented or meaningless → NEVER invent numbers; use real figures with sources, or remove the row.
 
 ## Interaction and motion

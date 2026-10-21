@@ -1,14 +1,15 @@
 # Typography
 
-Type carries most of a page's voice and nearly all of its usability. Choose faces by procedure from the subject, then set them by measurable rules.
+Type carries most of a page's voice and nearly all of its usability. Choose faces by procedure, judged on the render, then set them by measurable rules.
 
 ## Decide
 
 1. **Inherit.** If the codebase or brand has faces and a scale, use them (`extend.md`). Everything below fills gaps.
-2. **Vernacular.** Where does the subject's type live in the real world: labels, manuals, signage, ledgers, packaging, instruments, printed books? Write down two or three concrete sources before thinking of any face.
+2. **Tone.** In a few words, how should the type feel to this audience: warm, exact, plain-spoken, official, playful? The subject's real lettering (labels, signage, manuals) can suggest the tone, but don't copy it as costume: no monospace for a timetable or stencil for a crate unless the content is that thing.
 3. **Use.** Which mode (Persuade, Operate, Read), and what is the smallest size text will be read at? Operate faces are chosen for 12–14px; display faces for one headline.
-4. **Candidates.** List three or more faces that fit the vernacular, discard your first instinct as the reference point (`principles.md`), and evaluate the rest with the table below.
+4. **Pair.** Choose the reading face first: legible at body size, with the weights you need (table below). Then a headline face that differs from it in one clear way and suits the tone. Common faces are fine (`tells.md`); a face is not better for being unusual. Write down two pairings.
 5. **Roles.** Decide how many faces (one or two, rarely three) and what each one does.
+6. **Look.** Before building the page, render the real headline, a paragraph and the main button in both pairings, at desktop and phone width (a throwaway specimen file is enough). Keep the one that reads more easily and feels more like the product. Judge the render, not the name.
 
 ## Evaluate a candidate
 
@@ -79,7 +80,7 @@ Type-level tells are in `tells.md` (one sans for everything, the neighbour swap,
 ## Check
 
 - Every face and size on the page maps to a token; no stray sizes.
-- You can say where each face comes from in the subject's world, and what role it plays.
+- You can say what each face does, and which other pairing it beat on the render.
 - Running text measures 45–75 characters per line at 1440 and 390 wide.
 - Body is at least 16px (13–14px only in dense Operate UI), line height in range.
 - Numbers in tables, prices and counters use tabular figures; columns of numbers align.

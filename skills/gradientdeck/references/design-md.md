@@ -14,7 +14,7 @@ The file that records a product's design system so the next task, and the next a
 ## Rules
 
 - MUST treat an existing `DESIGN.md` as authority over your own taste (SKILL.md inputs). Change it only when the user asks, or when a decision you've made with them supersedes it, and say so in your report.
-- SHOULD write `DESIGN.md` **after the first build** in New world work, not before. A rulebook written before anything exists gets defended against the real page; one written after records what survived. Seed it from the direction note (`direction.md`).
+- SHOULD write `DESIGN.md` **after the first build** in New world work, not before. A rulebook written before anything exists gets defended against the real page; one written after records what survived. Seed it from the page's plan in `.gradientdeck/pages/` (`direction.md`).
 - SHOULD write it for existing code via the `extract` command (`extend.md`), recording the de facto system, not an idealised one.
 - SHOULD name tokens by role (`ink`, `surface`, `accent`, `danger`), not by appearance (`blue-500`, `dark-grey`). Raw scales can exist beneath roles; components reference roles.
 - SHOULD record provenance for each token group or token: `decided` (chosen in direction work, with the reason in prose) or `extracted` (found in code, with source and confidence).
@@ -103,6 +103,14 @@ A log of design decisions that should hold next time. One dated line each, with 
 - SHOULD add a line whenever the user settles a question, or you make a choice that a later task might otherwise reverse.
 - SHOULD append, never rewrite history. A reversed decision gets a new dated line that says what it supersedes.
 - Ratified decisions are not findings: `review.md` doesn't report them, unless one now causes a P0 (an accessibility or honesty failure), which always gets reported.
+
+## `.gradientdeck/pages/<page>.md`
+
+The plan for one New world page, saved by the direction roll and filled in by you (`direction.md`). It is a snapshot, not a log: rolling that page again replaces the whole file, carrying over only the job, the action and the worlds already dealt.
+
+- SHOULD read it before changing that page later, as the page's intent. Changing the page's direction means a new roll, not editing the plan to match drift.
+- Commit it with `decisions.md`; it is how the next agent knows why the page looks the way it does.
+- NEVER copy it into the page, and keep `.gradientdeck/` out of what gets deployed if the site is served from the project folder.
 
 ## `.gradientdeck/config.json`
 

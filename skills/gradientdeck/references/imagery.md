@@ -43,9 +43,10 @@ Photographs, screenshots, illustration, icons and logos. Images are the fastest 
 
 ### Icons
 
+- SHOULD use the project's icon set if it has one (an icon package in `package.json`, an icons folder, icons imported in nearby components); never add a second. Otherwise pick one set.
 - SHOULD use one icon set, one stroke weight, one size grid (for example 16/20/24px), aligned to text.
 - SHOULD let icons support labels, not replace them. Icon-only buttons are for universally understood actions (close, search, menu) and MUST have an accessible name (`aria-label` or visually hidden text).
-- AVOID emoji as interface icons or bullets: they render differently per platform and can't take the system's color or stroke. Allowed when emoji are part of the product's own content or voice.
+- AVOID emoji or Unicode symbols (arrows, ticks, stars) as interface icons or bullets: they render differently per platform and can't take the system's color or stroke. Allowed when emoji are part of the product's own content or voice.
 - AVOID putting icons in colored tiles by default. Use an icon where it speeds recognition (navigation, file types, status), not as decoration above every heading.
 - SHOULD give status icons a text equivalent; meaning is never carried by color or shape alone.
 
@@ -87,7 +88,7 @@ Photographs, screenshots, illustration, icons and logos. Images are the fastest 
 - Each image has a named role (evidence, atmosphere, explanation, identity).
 - No invented people, quotes or logos; slots for images still to come look finished and are correctly sized.
 - No fake device or browser chrome.
-- One icon set, one stroke weight, on a size grid; no emoji icons; icon-only buttons have accessible names.
+- The project's icon set if it has one, otherwise one set, one stroke weight, on a size grid; no emoji or Unicode symbol icons; icon-only buttons have accessible names.
 - Every image has `width`/`height` or `aspect-ratio`; below-fold images lazy-load; the LCP image does not.
 - Alt text describes purpose; decorative images have `alt=""`.
 - Sources and licences are recorded.

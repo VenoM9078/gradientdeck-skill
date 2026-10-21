@@ -55,7 +55,7 @@ For Operate surfaces, also check density, scanning and data formatting against `
 
 ## Bounded
 
-When reviewing your own build, run at most **two rounds** of look → fix → look (SKILL.md). After the second, stop and report what's left with its severity. Looping more usually trades one problem for another.
+When reviewing your own build, run at most **two rounds** of look → fix → look (SKILL.md). Each closing look renders every width again, not only the one a fix touched. After the second, stop and report what's left with its severity. Looping more usually trades one problem for another.
 
 ## Output format
 

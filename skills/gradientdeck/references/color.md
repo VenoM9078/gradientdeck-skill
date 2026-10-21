@@ -7,8 +7,9 @@ Color sets mood before anything is read, and it carries state, emphasis and mean
 1. **Inherit.** Existing brand colors and tokens win (`extend.md`). Extend their ramps; don't replace them.
 2. **Strategy.** Pick one of the four below for this surface's mode.
 3. **Source.** List the colors of the subject's material world: its objects, places, materials, packaging, the light it is used in. Pick from that list, not from what websites usually look like.
-4. **Light or dark.** Decide from where and when the product is used (rules below), not from taste.
+4. **Light or dark.** Decide from where and when the product is used (rules below), not from taste. Light grounds, warm off-whites included, are fine when the scene suits them; dark is never a way to look different.
 5. **Build.** Ramps in OKLCH, tinted neutrals, semantic colors, tokens.
+6. **Look.** Render the first screen and check it as a visitor would: a calm ground, text that reads easily, and one accent the eye goes to first. If the colors fight or shout, quiet them before adding anything.
 
 ## Strategy
 
@@ -17,7 +18,7 @@ Color sets mood before anything is read, and it carries state, emphasis and mean
 | **Restrained** | Tinted neutrals carry the page; one accent marks actions and state, under roughly 10% of the area | Operate by default; Read; Persuade when the content (photos, product) brings the color |
 | **Committed** | One brand hue owns large surfaces (a header field, a section, the primary surfaces) plus neutrals | Persuade; Read for a brand with a strong owned color; Operate only in chrome (sidebar, header), never behind data |
 | **Full palette** | Several hues, each with a fixed role (categories, products, characters, chart series) | When the subject has real categories, or the genre is plural (children's, food, events, editorial). Every hue needs a job |
-| **Drenched** | One hue floods the whole view; text and surfaces are tones of that hue | Persuade only, as the page's one bold move. Not for Operate or long Read |
+| **Drenched** | One hue floods the whole view; text and surfaces are tones of that hue | Persuade only. Not for Operate or long Read |
 
 AVOID mixing strategies within one surface. If you can't name the strategy, the page has none.
 
