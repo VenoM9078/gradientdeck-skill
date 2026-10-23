@@ -63,7 +63,7 @@ Words are part of the interface. They decide whether a page says something only 
 
 - NEVER invent claims, metrics, customer names, quotes or ratings (SKILL.md rule).
 - NEVER write urgency or scarcity that isn't true ("Only 2 left", countdown timers on evergreen offers).
-- Write around missing facts instead of printing gaps. No date yet: "New dates go out to the list first". No price: "Ask for a quote". No email: the contact form or the channel the user did give. If a sentence can't stand without the fact, cut the sentence. Mark the spot with an HTML comment and list it in your report. No bracketed placeholders, "TBD" or lorem ipsum in visible text.
+- Facts and demo content differ. Demo content (a sample entry, a name in a product demo, example data) is authored at full quality and labelled as an example. Facts (dates, prices, contacts) are written around instead of printed as gaps. No date yet: "New dates go out to the list first". No price: "Ask for a quote". No email: the contact form or the channel the user did give. If a sentence can't stand without the fact, cut the sentence. Mark the spot with an HTML comment and list it in your report. No bracketed placeholders, "TBD" or lorem ipsum in visible text.
 
 ### Length and readability
 

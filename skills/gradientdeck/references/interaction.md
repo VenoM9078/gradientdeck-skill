@@ -96,7 +96,7 @@ Small details that show the interface was finished. Tie each to the system's tok
 - **Only default and hover styled** → focus, pressed, loading and disabled forgotten → list states first, design each.
 - **`outline: none` with nothing in its place** → breaks keyboard use → `:focus-visible` with a contrasting outline.
 - **Placeholder-as-label forms** → looks minimal, fails users → visible labels.
-- **A toast for every save** → see `tells.md` → show the result in place.
+- **A toast for every save** → noise → show the result in place.
 - **A centered spinner for everything** → layout jumps when content lands → skeletons with reserved space.
 - **Empty states with a generic illustration and "Nothing here"** → says nothing → explain and offer the action.
 

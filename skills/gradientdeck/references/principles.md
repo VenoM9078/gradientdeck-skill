@@ -69,6 +69,6 @@ When the user asks for one of these, change by **one step** and keep everything 
 | `simplify` | Remove elements until each remaining one has a job. Merge sections that say the same thing. Fewer type sizes, fewer colors, fewer borders. |
 | `more premium` | Usually means more restraint and better craft, not more effects: tighter type, more space, fewer colors, better images, crisper details. Say this back to the user. |
 | `more fun` / `more playful` | Find play in the subject (its objects, its language), not in generic bounce and confetti. One playful move, not ten. |
-| `more modern` | Ask what feels dated to them. Usually: heavy shadows, gradients everywhere, crowded layouts. Fix those; don't add trend effects. |
+| `more modern` | Ask what feels dated to them. Usually: heavy shadows, crowded layouts, browser defaults. Fix those, then raise the finish (`craft.md`, Web material and finish): precise type spacing, layered surfaces, light with a source, motion that shows state. No effects without a source. |
 
 If a request is vague ("make it pop"), state your interpretation in one line, then make the change.

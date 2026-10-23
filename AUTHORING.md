@@ -8,7 +8,7 @@ Design judgment for a coding agent. It teaches decisions, not looks. The agent s
 
 ## The four laws
 
-1. **Procedures, never picks.** Don't recommend a named typeface, a hex palette, a layout template or a "use X instead of Y" swap. Every published pick becomes the next thing every agent reaches for. Describe how to choose: what to look at, what to test, what to reject. Exact values are fine for things that are physics or convention (durations, contrast ratios, touch targets, line length), not taste.
+1. **Procedures, never picks.** Don't recommend a named typeface, a hex palette, a layout template or a "use X instead of Y" swap. Every published pick becomes the next thing every agent reaches for. Describe how to choose: what to look at, what to test, what to reject. Exact values are fine for physics and convention (durations, contrast ratios, touch targets, line length) and for finish defaults: the ranges a careful designer uses for corners, shadows, tracking, line height and spacing (`craft.md`, Finish values). A finish default is a range that the world or brand can override, never a named face, palette or layout.
 2. **Context decides.** Almost no rule is universal. Scope each rule to a mode (Persuade, Operate, Read), a situation (Extend, New surface, New world) or a genre, and say when it doesn't apply. "Never" is reserved for honesty and accessibility.
 3. **Inherit before you invent.** An existing codebase, DESIGN.md or brand is the authority. The skill's taste applies where the product hasn't decided yet.
 4. **Every rule must be checkable.** If a reviewer can't verify it by looking at the code or the rendered page, rewrite it until they can. "Make it feel premium" is not a rule. "Body text sits at 45–75 characters per line" is.
@@ -17,6 +17,8 @@ Design judgment for a coding agent. It teaches decisions, not looks. The agent s
 
 - Plain, direct sentences. Second person ("you"), imperative for rules.
 - Specific over general. Numbers where numbers exist.
+- Aim high in the framing. Rules tell the agent what excellent looks like, not only what to avoid; put what to make before what to refuse.
+- A short memorable test is allowed when it encodes judgment a checklist can't ("could an unrelated product use this unchanged?"), as long as it can be checked on the render.
 - No hype words, no filler, no motivational asides. No "elevate", "seamless", "stunning", "delightful", "modern and clean".
 - Short paragraphs. Bullets for lists of checks. Tables for value ranges and decision gates.
 - No emoji. No ALL CAPS shouting except the `MUST` / `NEVER` keywords defined below.

@@ -6,7 +6,7 @@ Color sets mood before anything is read, and it carries state, emphasis and mean
 
 1. **Inherit.** Existing brand colors and tokens win (`extend.md`). Extend their ramps; don't replace them.
 2. **Strategy.** Pick one of the four below for this surface's mode.
-3. **Source.** List the colors of the subject's material world: its objects, places, materials, packaging, the light it is used in. Pick from that list, not from what websites usually look like.
+3. **Source.** List the colors of the subject's world: its objects, places, materials, the light it is used in, and for software its interface, states, signals and output. Pick from that list, not from what websites usually look like.
 4. **Light or dark.** Decide from where and when the product is used (rules below), not from taste. Light grounds, warm off-whites included, are fine when the scene suits them; dark is never a way to look different.
 5. **Build.** Ramps in OKLCH, tinted neutrals, semantic colors, tokens.
 6. **Look.** Render the first screen and check it as a visitor would: a calm ground, text that reads easily, and one accent the eye goes to first. If the colors fight or shout, quiet them before adding anything.
@@ -72,7 +72,7 @@ Palette tells live in `tells.md` (purple-blue gradients, glows, untinted neutral
 - **Semantic colors at full saturation next to a muted brand** → they shout → match lightness and chroma to the system.
 - **Dark mode made by inverting light mode** → wrong elevation, harsh contrast → design it per the dark-mode rules.
 - **Muted gray text that fails 4.5:1** → the most common contrast failure → darken until it passes.
-- **Colored shadows and glows to add "depth"** → decoration → depth from lightness and layering.
+- **Colored shadows and glows to add "depth"** → decoration → depth from lightness and layering; glow only where light has a source in the product.
 
 ## Check
 

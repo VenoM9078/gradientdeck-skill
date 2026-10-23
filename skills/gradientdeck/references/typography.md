@@ -7,7 +7,7 @@ Type carries most of a page's voice and nearly all of its usability. Choose face
 1. **Inherit.** If the codebase or brand has faces and a scale, use them (`extend.md`). Everything below fills gaps.
 2. **Tone.** In a few words, how should the type feel to this audience: warm, exact, plain-spoken, official, playful? The subject's real lettering (labels, signage, manuals) can suggest the tone, but don't copy it as costume: no monospace for a timetable or stencil for a crate unless the content is that thing.
 3. **Use.** Which mode (Persuade, Operate, Read), and what is the smallest size text will be read at? Operate faces are chosen for 12–14px; display faces for one headline.
-4. **Pair.** Choose the reading face first: legible at body size, with the weights you need (table below). Then a headline face that differs from it in one clear way and suits the tone. Common faces are fine (`tells.md`); a face is not better for being unusual. Write down two pairings.
+4. **Pair.** Choose the reading face first: legible at body size, with the weights you need (table below). Then a headline face that differs from it in one clear way and suits the tone. In Persuade work, the overused faces in `tells.md` need a reason no other face meets; in Operate and Read, workhorse faces are fine. A face is not better for being unusual either. Write down two pairings.
 5. **Roles.** Decide how many faces (one or two, rarely three) and what each one does.
 6. **Look.** Before building the page, render the real headline, a paragraph and the main button in both pairings, at desktop and phone width (a throwaway specimen file is enough). Keep the one that reads more easily and feels more like the product. Judge the render, not the name.
 

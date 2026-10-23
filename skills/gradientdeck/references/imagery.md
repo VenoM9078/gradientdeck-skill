@@ -10,9 +10,9 @@ Photographs, screenshots, illustration, icons and logos. Images are the fastest 
    - **Explanation:** shows how something works (a diagram, an annotated screenshot).
    - **Identity:** says who this is (a founder portrait, the workshop, the logo).
    If it plays none of these, it's filler. Cut it.
-2. **What real material exists?** Ask the user and check the codebase before using anything else. Real beats polished.
-3. **If nothing real exists:** a structure that doesn't need the image, a drawing of the actual subject (SVG shapes of the product, a diagram of the process), or openly licensed imagery of the subject, in that order of preference.
-4. **What single treatment will every image share?** Decide crop, color grade, framing and corners once.
+2. **What real material exists?** Ask the user once whether they have photos of their own, and check the codebase. Theirs win every slot.
+3. **If they have none:** photographs of the subject from the skill's library: `node <skill folder>/scripts/roll.mjs photos "<subject>"` prints matches with ready image code and credits (in New world, the roll's `--photos` prints them). For software, the product's own interface built in HTML leads, and photos set the scene. Type alone only when the page is about words. Drawings are for diagrams and icons, never in a photo's place.
+4. **What single treatment will every image share?** One from the roll's list (natural, warm, muted, mono, tint, duotone), chosen to sit in the palette, plus one set of crops, frames and corners.
 
 ## Rules
 
@@ -20,19 +20,19 @@ Photographs, screenshots, illustration, icons and logos. Images are the fastest 
 
 - SHOULD use real product screenshots for software: current UI, crisp at 2x, with realistic data that fits the product (real-looking names, plausible values, no lorem ipsum). Crop to the part that makes the point rather than shrinking the whole screen.
 - SHOULD use real photography of the actual subject (the place, the people who work there, the object) over generic stock.
-- SHOULD choose no image over a generic one. A page with strong type and no photos reads as confident; a page with irrelevant stock reads as filler.
+- SHOULD prefer a photograph of the actual subject to both a generic image and no image. A page about a place, food, a craft or an event with no photograph reads as a template; a page with off-subject stock reads as filler. Ask of each photo: if it were deleted, would the page lose a fact?
 
 ### Honesty
 
 - NEVER present invented people, testimonials, team members or customer logos as real. NEVER use a company's logo without permission or a real relationship (see `SKILL.md`).
-- When a real image will come later, give it a finished-looking slot at its final size (a drawing, a tinted panel with the subject's texture), never visible "[Photo: …]" text. Note what belongs there in an HTML comment and in your report.
-- AVOID fake device, browser or editor frames around content (`tells.md`). A real screenshot may get a frame only when it needs one to be understood, and then a plain one. NEVER frame a mockup so it passes for a shipped product.
+- When a real image will come later, fill its slot with a library photo of the subject at its final size, never visible "[Photo: …]" text or an empty tinted panel. List it in your report as a stand-in for the user's own.
+- AVOID fake device, browser or editor frames around content (`tells.md`). A real screenshot may get a frame only when it needs one to be understood, and then a plain one. NEVER frame a mockup so it passes for a shipped product. Software with no screenshots: build the product's own interface in HTML, shown working, with realistic example data labelled as an example. That is content, not a mockup.
 - NEVER pass off generated images as photographs of real places, products or people.
 
 ### Sourcing
 
-- MUST use only images the project owns or that carry an open or permitted licence, and record the source, author and licence for each (in a credits file or `DESIGN.md`).
-- SHOULD credit where the licence requires it, in the footer or a caption.
+- MUST use only the user's images, the project's, or photos the library prints. NEVER an image URL written from memory, and never a stock site (Unsplash, Pexels, Pixabay).
+- MUST credit every library photo: one small "Photographs:" line in the footer with each printed credit.
 
 ### Art direction
 
@@ -71,7 +71,7 @@ Photographs, screenshots, illustration, icons and logos. Images are the fastest 
 
 ## By mode
 
-- **Persuade:** imagery is often the bold move. One strong, real image beats several weak ones.
+- **Persuade:** imagery is often the bold move. A page about something physical leads with a photograph, big; one strong image beats several weak ones.
 - **Operate:** almost none. Icons and avatars only; empty states may use a small, consistent illustration if the system has one.
 - **Read:** images serve the text: diagrams, figures, captions. Full column width or wider, never floated tiny.
 

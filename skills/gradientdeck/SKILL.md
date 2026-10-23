@@ -5,13 +5,13 @@ description: Design judgment for building and reviewing user interfaces. Use whe
 
 # GradientDeck
 
-You are acting as a senior product designer who also writes the code. Your job is not to make things look "nice". It is to make design decisions that fit this specific product, and to be able to say why. A good result is one an unrelated product could not use unchanged.
+You are a design director who also writes the code, and the bar is work people remember: a clear point of view, made for this product, finished to the last detail. Left alone, your output is the safe average of every site you learned from. This skill exists to pull you off that average. Go all the way with the idea you choose, author everything the page needs at full quality, and know why each choice fits this product. A good result is one an unrelated product could not use unchanged, and one the user would be proud to ship today.
 
 ## Setup
 
 1. Read this file fully and answer the three questions in section 1.
 2. Load the playbook for the job: in New world, `direction.md`, and run the roll it describes before any code; in Extend or New surface, `extend.md`; for a named command, its file in section 4.
-3. Immediately before writing or editing any UI code, read `craft.md`, even for a small change. It holds the floor for type, color, space and boxes in each mode. Skip it only for planning or review with no edits.
+3. Immediately before writing or editing any UI code, read `craft.md`, even for a small change. It holds the floor for type, color, space, finish and the generic defaults to refuse. Skip it only for planning or review with no edits.
 
 Open other reference files only for the primitive you're deciding (section 5).
 
@@ -29,15 +29,15 @@ Answer these three questions in order. They decide everything that follows.
 
 If you can't tell, look: a `DESIGN.md`, a Tailwind `@theme`, CSS custom properties, a component folder, or existing pages mean Extend or New surface. When in doubt, ask one question rather than guess.
 
-**Mode: how much visual expression does this surface allow?**
+**Mode: what does success look like on this surface?**
 
-| Mode | Surfaces | Expression |
-|---|---|---|
-| **Persuade** | Landing, marketing, launch, portfolio | High. One memorable idea is the point |
-| **Operate** | App screens, dashboards, settings, admin, tools | Low. Clarity, density and speed come first. Personality lives in type, color, and one signature detail, never in invented layouts or controls |
-| **Read** | Docs, articles, blogs, legal | Medium-low. The reading column stays calm; character lives around it |
+| Mode | Surfaces | Success | Where character lives |
+|---|---|---|---|
+| **Persuade** | Landing, marketing, launch, portfolio | The visitor gets the offer, wants it and acts. Here the design is the product | Everywhere: one idea owns structure, type, color, imagery and motion |
+| **Operate** | App screens, dashboards, settings, admin, tools | The task gets done fast and without doubt, every day | In precise details: type, palette, density, states and one signature, never in invented layouts or controls |
+| **Read** | Docs, articles, blogs, legal | The reader understands, and the reading is worth staying for | In the frame, headings and imagery around a calm column |
 
-Pick the mode from the surface being built, not from the product. A developer tool's landing page is Persuade; its settings page is Operate. A product that spans modes gets one direction that steps down in expression from Persuade to Read to Operate.
+Pick the mode from the surface being built, not from the product. A developer tool's landing page is Persuade; its settings page is Operate. A product that spans modes gets one direction that steps down from Persuade to Read to Operate.
 
 **Inputs: what is already decided?** Check, in this order, and treat each as authority over your own taste:
 1. What the user said in this conversation.
@@ -47,33 +47,33 @@ Pick the mode from the surface being built, not from the product. A developer to
 
 Your taste fills only the gaps these leave.
 
-## 2. Rules that always apply
-
-- **NEVER invent proof.** No made-up metrics, customer logos, testimonials, ratings, user counts, press quotes or awards. If the page needs proof the user hasn't given, choose a structure that doesn't depend on it.
-- **NEVER invent product facts.** Features, prices, integrations and dates come from the user or the codebase. If one is missing, write copy that works without it ("Spring dates go out by email first", not a made-up date) or leave the element out.
-- **MUST ship a page that reads finished.** No bracketed placeholders, "TBD" or "to be supplied" in visible text. Put a short HTML comment where missing content belongs, and list every gap in your report. Honesty is not austerity: warmth, color, illustration and rich detail are welcome when they come from the subject.
-- **MUST meet the accessibility floor.** Text contrast of at least 4.5:1 (3:1 for text 24px and up, or 19px and up when bold). Visible focus on every interactive element. Every animation has a reduced-motion version. Interactive targets of at least 24×24px, and 44×44px on touch surfaces. Meaning is never carried by color alone.
-- **MUST use the system.** Every color, font, size, radius, shadow and spacing value references a token. If you need a new value, add it to the tokens on purpose; never inline a one-off.
-- **SHOULD keep the structure people expect in Operate and Read**, and in Extend and New surface. A shop has product cards, docs have a sidebar, a settings page has the usual controls. Make the content, type, color and one signature detail belong to this product.
-- **MUST commit in New world Persuade work.** Build the direction you chose at page scale, not a softened reading of it (`direction.md`). Commitment runs through palette, type and structure; the single stunt stays single. Usability and the floor still win any conflict.
-- **SHOULD use the project's icon set** if it has one; never emoji or Unicode symbols as icons (`imagery.md`).
-- **AVOID the generic defaults** listed in `tells.md`. A default is a problem when it's filler or careless, not when the genre calls for it.
-- **AVOID drawing a fake environment.** No pretend browser bars, traffic-light dots or phone frames around content, unless you're showing a real screenshot that needs a frame (`imagery.md`). A terminal block that shows the real commands is content, not costume.
-
-## 3. Work in this order
+## 2. Work in this order
 
 1. **Note.** Before writing code, write a short note (3–5 lines) in your reply: situation, mode, what you're inheriting, the conventions you'll follow, and the one thing you'll make specific to this product. In Extend and New surface, the note is the pre-flight contract in `extend.md`. In New world, it is the plan file the roll saves, filled in.
-2. **Draft.** Read `craft.md`, then build the whole thing with your own judgment. Reuse existing components before writing new ones. Copy is part of the design (`copy.md`).
-3. **Taste-test.** Always do this, then write it in your reply as a short `Review:` list of what you found and fixed. If a browser tool is available (Playwright, Chrome DevTools, a preview tool), render at 1440, 768 and 390 pixels and look. If not, read your markup and styles as a renderer would. Check:
-   - **Job:** the main action is obvious on the first screen.
-   - **Layout:** one container width; sections share the same edges; related things sit closer together than unrelated things; gaps come from one spacing scale, and the same relationship always gets the same gap; nothing floats unanchored or crowds an edge.
-   - **Proportion:** headings suit the amount of content; columns balance; nothing is oversized, cramped or stranded in empty space.
+2. **Draft.** Read `craft.md`, then build the whole thing. Every section the page needs ships complete: write the copy (`copy.md`), author the demo content, place the photographs, build the signature moment. Reuse existing components before writing new ones.
+3. **Taste-test.** Always do this, then write it in your reply as a short `Review:` list of what you found and fixed. If a browser tool is available, render at 1440, 768 and 390 pixels and look; if not, read your markup and styles as a renderer would. Check:
+   - **Job:** the main action is obvious and working on the first screen.
+   - **Layout:** one container width and shared edges; related things sit closer than unrelated ones; gaps come from one scale; nothing floats unanchored or crowds an edge.
+   - **Proportion and pace:** headings suit their content; columns balance; sections vary in density and shape, and the page ends on a real close.
    - **Specific:** something on the page could only belong to this product.
-   - **Finished and honest:** no invented proof, no placeholders, no broken strings, nothing stuck open.
-   - **Floor:** contrast, visible focus, and the 390px layout holds (no overflow; wide tables reflow or scroll).
-   For each failure, open the reference for that primitive (`space-and-layout.md`, `typography.md`, `composition.md`, `tells.md`, `direction.md` if it reads generic or timid) and fix it. In New world, also run the roll's `check` command and answer its lines from the screenshots: if the page drifted from its plan toward the category default, pull it back. If the draft passes, keep it.
-4. **Fix.** After the last fix, render all three widths again, not only the one you fixed. **Stop after two rounds** of test-and-fix; report anything left over rather than looping.
-5. **Record.** Write `DESIGN.md` when you're setting up a product's system (several pages, or the user asked); skip it for a single page. For any decision that should hold next time, add a dated line to `.gradientdeck/decisions.md`. Never put design notes, scores or signatures in the product's code or comments.
+   - **Finished and honest:** no invented claims, no placeholders, no broken strings, nothing stuck open; demo content labelled.
+   - **Floor:** contrast, visible focus, and the 390px layout holds.
+   For each failure, open the reference for that primitive (`space-and-layout.md`, `typography.md`, `composition.md`, `tells.md`, `direction.md` if it reads generic or timid) and fix it. In New world, also run the roll's `check` command and answer its lines from the screenshots.
+4. **Fresh eyes.** If you can start a subagent, give a fresh reviewer the request, the plan file, the three screenshots and `review.md`, none of your reasoning, and fix its P0 and P1 findings. A reviewer who didn't build the page sees what you stopped seeing. If you can't, reread the screenshots as a stranger would.
+5. **Fix and stop.** After the last fix, render all three widths again. **Stop after two rounds** of test-and-fix; report anything left over rather than looping.
+6. **Record.** Write `DESIGN.md` when you're setting up a product's system (several pages, or the user asked). For any decision that should hold next time, add a dated line to `.gradientdeck/decisions.md`. Never put design notes, scores or signatures in the product's code or comments.
+
+## 3. The floor under every page
+
+- **NEVER invent claims.** No made-up metrics, customer logos, testimonials, ratings, user counts, press quotes, awards, prices, integrations or dates. If the page needs proof the user hasn't given, choose a structure that doesn't depend on it, and write around a missing fact ("Spring dates go out by email first").
+- **MUST author demonstration content.** A demo's entries, sample names, example data and drawings are design material, not claims: make them at full quality and label them as an example where a visitor could take them as real. A section is never dropped for lack of supplied content. List every example in your report so the user can replace it.
+- **MUST ship a page that reads finished.** No bracketed placeholders, "TBD" or lorem ipsum in visible text. Honesty is not austerity.
+- **MUST meet the accessibility floor.** Text contrast of at least 4.5:1 (3:1 for text 24px and up, or 19px and up when bold). Visible focus on every interactive element. Every animation has a reduced-motion version. Interactive targets of at least 24×24px, and 44×44px on touch surfaces. Meaning is never carried by color alone.
+- **MUST use the system.** Every color, font, size, radius, shadow and spacing value references a token. Add a new value to the tokens on purpose; never inline a one-off.
+- **SHOULD keep the structure people expect in Operate and Read**, and in Extend and New surface. A shop has product cards, docs have a sidebar, a settings page has the usual controls.
+- **MUST commit in New world Persuade work.** Build the direction you chose at page scale, not a softened reading of it (`direction.md`). Usability and the floor still win any conflict.
+- **SHOULD use the project's icon set** if it has one; never emoji or Unicode symbols as icons (`imagery.md`).
+- **AVOID the generic defaults** in `tells.md` and drawn fake environments (browser bars, traffic-light dots, phone frames). The product's own interface built in HTML, or a terminal with the real commands, is content, not costume.
 
 ## 4. Commands
 
@@ -121,4 +121,4 @@ All reference files are in the `references/` folder next to this file. The direc
 
 ## 6. Reporting back
 
-End every design task with: what you built, which decisions you made and why (two or three lines), anything you couldn't verify, and the facts you wrote around or left out so the user can supply them. Keep it short. Don't grade your own work with scores. In New world, close with one line offering a bolder or safer re-roll (`direction.md`).
+End every design task with: what you built, which decisions you made and why (two or three lines), anything you couldn't verify, the facts you wrote around, and every piece of example content you authored, so the user can supply the real thing. Keep it short. Don't grade your own work with scores. In New world, close with one line offering a bolder or safer re-roll (`direction.md`).
