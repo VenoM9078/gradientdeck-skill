@@ -1,6 +1,6 @@
 {
   "name": "gradientdeck",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Design judgment for coding agents: an Agent Skill that makes the pages they build look made, not generated. Works with Claude Code, Codex, Cursor and Copilot.",
   "type": "module",
   "bin": {

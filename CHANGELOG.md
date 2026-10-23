@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.0
+
+- **Direction roll.** New-world work runs a local script (`scripts/roll.mjs`) over the agent's own seven ranked ideas, picks from the top three, and deals worlds from a bundled catalog of 257 (`worlds/worlds.json`, built by Grok). Working screens get no dealt worlds and keep standard layouts. (`direction.md`)
+- **Page plans.** The roll saves a short plan to `.gradientdeck/pages/<page>.md`; `roll.mjs check` lists what to verify on the screenshots and prints a FIX line for each problem it finds in the files.
+- **Craft floor.** `references/craft.md` is the one-page floor for type, color, space, boxes and finish values, read before any UI code.
+- **Photographs.** A bundled list of 755 Wikimedia Commons photographs (details only; pages link the originals). Persuade rolls take `--photos "<subject> | ..."` or `"none: <reason>"`, and `roll.mjs photos "<subject>"` finds matches with placement rules, treatments and credits. A page about a place, food, a craft or an event should show one. (`imagery.md`, `craft.md`)
+- **Picture checks.** `check` flags pages with no photographs, uncredited or stock-site images, the same photo used twice, photos that look alike, frames holding only a label, and rows of identical marks standing for a number.
+- Removed blanket bans on common fonts, cream grounds and copy-beside-picture first screens; choose by render and fit instead.
+
 ## 0.1.3
 
 Round 2 showed the skill steering strong models away from layouts they already do well, and the review step almost never running (1 critique-file read in 108 runs).
